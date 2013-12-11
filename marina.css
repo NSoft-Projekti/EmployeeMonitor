@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+body{
+	background:grey;
+	font-family: Arial, Verdana, sans-serif;
+	}
+#container{
+	width:auto;
+	background:#d3d3d3;
+	margin:10px;
+	padding:10px;
+				}
+#header{ 
+	background: white;
+	margin: 10px ;
+	padding:10px;
+			}
+#content{
+background:url(content.jpg);
+margin:10px;
+}	
+
+#login_form{  
+margin: 10px auto 10px 10 px;
+background:white;
+float:left;
+}

@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+body{
+font-family:calibri;
+}
+.container{
+width:1024px;
+height:800px;
+margin:auto;
+}
+.header{
+width:1024px;
+height:50px;
+background:white;
+}
+
+.registracija{
+background:url('naslovna.jpg');
+width:800px;
+height:590px;
+
+}
+

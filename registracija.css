@@ -1,0 +1,192 @@
+@CHARSET "ISO-8859-1";
+body{
+font-family:calibri;
+}
+.container{
+width:1024px;
+height:800px;
+margin:auto;
+background:url('pozadina.jpg');
+background-repeat:no-repeat;
+}
+.header{
+width:1024px;
+height:30px;
+background:white;
+}
+
+
+.registracija{
+height:690px;
+width:280px;
+background:white;
+float:left;
+margin-left:150px;
+margin-top:60px;	
+}
+.reguser input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+font-size:15px;
+margin-bottom:10px;
+
+}
+.regime input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+font-size:15px;
+margin-right:10px;
+margin-bottom:10px;
+}
+.regprezime input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+font-size:15px;
+margin-bottom:10px;
+}
+.regmjesto input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px:
+font-size:15px;
+margin-bottom:10px;
+}
+
+.regemail input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+font-size:15px;
+margin-bottom:10px;
+}
+
+
+
+.datumrodjenja{
+height:20px;
+width:200;
+color:black;
+font-size:15px;
+font-weight:normal;
+margin-bottom:15px;
+margin-top:3px;
+overflow:auto;
+}
+
+.password input{
+
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+font-size:15px;
+margin-bottom:10px;
+}
+
+.regrm input{
+width:200px;
+height:20px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+padding:8px 10px;
+margin-top:15px;
+font-size:15px;
+margin-bottom:20px;
+}
+
+.reggrad input{
+
+height:20px;
+width:200;
+color:black;
+font-size:15px;
+font-weight:normal;
+margin-bottom:15px;
+margin-top:25px;
+}
+
+.dmg
+{
+width:300px;
+margin-bottom:10px; 
+
+}
+#dan{
+font-size:13px;
+padding:5px;
+height:30px;
+margin:2px 0 0 0;
+border:1px solid #bdc7d8;
+}
+#mjesec{
+font-size:13px;
+padding:5px;
+height:30px;
+margin:2px 0 0 0;
+border:1px solid #bdc7d8;
+}
+#godina{
+font-size:13px;
+padding:5px;
+height:30px;
+margin:2px 0 0 0;
+border:1px solid #bdc7d8;
+}
+
+.spol
+{
+font-weight:bold;
+color:black;
+font-size:15px;
+float:left;
+width:200px;
+height:20px;
+margin:13px 0 10px 0;
+}
+
+.registrirajse input{
+
+width:130px;
+height:35px;
+background-color:silver;
+border:1px solid #3b6e22;
+border-radius:5px;
+margin-top:5px;
+margin-bottom:20px;
+font-weight:bold;
+font-size:17px;
+color:black;
+padding:7px 20px;
+text-align:center;
+cursor:pointer;
+}
+.registrirajse{
+border-bottom:1px solid #a0a9c0;
+width:200px;
+margin-top:30px;
+margin-bottom:20px;
+}
+
+.registracija h1{
+font-size:25px;	
+margin-bottom:15px;
+color:#333;

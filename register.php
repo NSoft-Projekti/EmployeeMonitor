@@ -38,9 +38,14 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
 }
 else
 {
+echo '<html>
+ <head>
+ <title>registracija</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ </head>
+ <body>
  
- 
-   echo '<h1>Register</h1>
+   <h1>Register</h1>
  
    <p>Please enter your details below to register.</p>
  
@@ -57,6 +62,8 @@ else
         <input type="submit" name="submit" value="submit" />
 
     </fieldset>
-    </form>';
+    </form>
+ </body>
+ </html>';
 }
 ?>

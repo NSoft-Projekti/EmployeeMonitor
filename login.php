@@ -36,27 +36,5 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
         echo "<p>Klik na  <a href=\"index.php\">i probajte ponovno!</a></p>";
     }
 }
-else
-
-	{
-		echo '<html>
-	<head>
-	<title>logiranje</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	</head>
-	<body>
-	
-   <h1>Login</h1>
-	
-   <p>Hvala na posjeti! Logirajte se, ili <a href="register.php">registrirajte</a>.</p>
-	
-   <p>Unesite podatke ispod za logiranje.</p>
-	
-		
-	
-	</body>
-	</html>';
-	}
-   			
 	
 ?>

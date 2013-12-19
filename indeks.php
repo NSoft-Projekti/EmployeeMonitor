@@ -19,6 +19,6 @@ echo("Povezivanje na bazu je uspijelo.");
 $res = mysql_select_db($mysql_database);
 
 if (!$res){
-	exit("Nije moguÃ¦e izabrati bazu");
+	exit("Nije moguæe izabrati bazu");
 }
 ?>

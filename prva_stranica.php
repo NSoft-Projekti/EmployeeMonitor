@@ -6,7 +6,7 @@
 <link type="text/css" href="prva_stranica.css" rel="stylesheet"/>
 </head>
 <body>
-<form action="login.php" method="POST">
+
 <div class="container">
 	<div class="form">
 	<form method="POST" action="login.php">
@@ -25,6 +25,6 @@
 	</form>
 	</div>
 </div>
-</form>
+
 </body>
 </html>

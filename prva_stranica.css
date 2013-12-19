@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+body{
+font-family:calibri;
+}
+.container{
+background:url(logo-content.jpg);
+width:1024px;
+height:600px;
+margin:auto;
+}
+.form{
+width:260px;
+height:590px;
+background:white;
+float:right;
+
+}
+.headline{
+margin-left:40px;
+}
+.name input{
+width:164px;
+height:35px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+font-size:18px;
+margin-top:10px;
+margin-left:40px;
+margin-bottom:10px;
+background-color:#F8F8F8 ;
+}
+#password input{
+width:164px;
+height:35px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+font-size:18px;
+margin-bottom:50px;
+margin-left:40px;
+background-color:#F8F8F8 ;
+}
+.login input{
+width:80px;
+height:27px;
+border-radius:5px;
+border:1px solid #bdc7d8;
+font-size:12px;
+background-color:#F0F0F0;
+margin-left:40px;
+font-weight:bold;
+}

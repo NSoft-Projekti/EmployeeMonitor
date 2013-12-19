@@ -6,7 +6,7 @@ include_once 'indeks.php';
 if(!empty($_SESSION['LoggedIn']) and !empty($_SESSION['Username']))
 {
  
-echo '<h1>Samo za èlanove</h1>
+echo '<h1>Samo za članove</h1>
      <p>Hvala za logiranje! Vi ste <b></b> a Vaša email adresa je: <b></b>.</p>';
  
 }

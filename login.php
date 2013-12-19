@@ -34,7 +34,7 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
     else
     {
     	echo "<h1>Greška</h1>";
-        echo "<p>Klik na  <a href=\"index.php\">i probajte ponovno!</a></p>";
+        echo "<p>Klik na  <a href=\"register.php\">i probajte ponovno!</a></p>";
     }
 }
 	

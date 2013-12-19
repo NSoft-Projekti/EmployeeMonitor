@@ -27,7 +27,7 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
         $_SESSION['LoggedIn'] = 1;
  
     	echo "<h1>Uspjeh</h1>";
-        echo "<p>Šaljemo Vas u podruèje za èlanove.</p>";
+        echo "<p>Šaljemo Vas u područje za članove.</p>";
         echo "";
     }
     else
@@ -38,11 +38,20 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
 }
 else
 {
+	echo '<html>
+	<head>
+	<title>logiranje</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
  
-   echo '<h1>Login</h1>
+   <h1>Login</h1>
  
    <p>Hvala na posjeti! Logirajte se, ili <a href="register.php">registrirajte</a>.</p>
  
+   <p>Unesite podatke ispod za logiranje.</p>
+ 
+   			
 	<form method="post" action="login.php" name="loginform">
 	<fieldset>
 		<label for="username">Username:</label><input type="text" name="username" /><br />
@@ -50,6 +59,10 @@ else
    		<input type="submit" name="submit" value="submit" />
  
 	</fieldset>
-	</form>';
+	</form>
+	
+	
+	</body>
+	</html>';
 }
 ?>

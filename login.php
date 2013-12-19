@@ -1,6 +1,6 @@
 <?php
 
-include 'indeks.php';
+include_once 'indeks.php';
 
 if(!empty($_SESSION['LoggedIn']) and !empty($_SESSION['Username']))
 {
@@ -37,32 +37,26 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
     }
 }
 else
-{
-	echo '<html>
+
+	{
+		echo '<html>
 	<head>
 	<title>logiranje</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	</head>
 	<body>
- 
-   <h1>Login</h1>
- 
-   <p>Hvala na posjeti! Logirajte se, ili <a href="register.php">registrirajte</a>.</p>
- 
-   <p>Unesite podatke ispod za logiranje.</p>
- 
-   			
-	<form method="post" action="login.php" name="loginform">
-	<fieldset>
-		<label for="username">Username:</label><input type="text" name="username" /><br />
-		<label for="password">Password:</label><input type="text" name="password" /><br />
-   		<input type="submit" name="submit" value="submit" />
- 
-	</fieldset>
-	</form>
 	
+   <h1>Login</h1>
+	
+   <p>Hvala na posjeti! Logirajte se, ili <a href="register.php">registrirajte</a>.</p>
+	
+   <p>Unesite podatke ispod za logiranje.</p>
+	
+		
 	
 	</body>
 	</html>';
-}
+	}
+   			
+	
 ?>

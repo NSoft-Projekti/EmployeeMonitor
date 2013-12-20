@@ -10,7 +10,7 @@ $mysql_password = "mojapraksa";
 /* Povezivanje na bazu - konekcija. */
 $conn = mysql_connect($mysql_host, $mysql_user, $mysql_password);
 if (!$conn){
-	exit("Povezivnje na bazu nije uspijelo: " . $conn);
+	exit("Povezivnje na bazu nije uspjelo: " . $conn);
 }
 
 echo("Povezivanje na bazu je uspjelo.");

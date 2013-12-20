@@ -6,8 +6,8 @@ include_once 'indeks.php';
 if(!empty($_SESSION['LoggedIn']) and !empty($_SESSION['Username']))
 {
  
-echo '<h1>Samo za ƒçlanove</h1>
-     <p>Hvala za logiranje! Vi ste <b></b> a Va≈°a email adresa je: <b></b>.</p>';
+echo '<h1>Samo za Ëlanove</h1>
+     <p>Hvala za logiranje! Vi ste <b></b> a Vaöa email adresa je: <b></b>.</p>';
  
 }
 elseif(!empty($_POST['username']) and !empty($_POST['password']))
@@ -28,12 +28,12 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
         $_SESSION['LoggedIn'] = 1;
  
     	echo "<h1>Uspjeh</h1>";
-        echo "<p>≈†aljemo vas u podruƒçje za ƒçlanove.</p>";
+        echo "<p>äaljemo vas u podruËje za Ëlanove.</p>";
         echo "";
     }
     else
     {
-    	echo "<h1>Gre≈°ka</h1>";
+    	echo "<h1>Greöka</h1>";
         echo "<p>Klik na  <a href=\"login.php\">i probajte ponovno!</a></p>";
     }
 }

@@ -19,8 +19,8 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
     
     if(mysql_num_rows($checkusername) == 1)
     {
-    	echo "<h1>Gre≈°ka</h1>";
-    	echo "<p>To korisniƒçko ime veƒá postoji, probajte ponovno.</p>";
+    	echo "<h1>Greöka</h1>";
+    	echo "<p>To KorisniËko ime veÊ postoji, probajte ponovno.</p>";
     }
     else
 
@@ -32,11 +32,11 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
         if($registerquery)
         {
             echo "<h1>Uspjeh</h1>";
-            echo "<p>Uspje≈°no ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
+            echo "<p>Uspjeöno ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
         }
         else
         {
-            echo "<h1>Gre≈°ka</h1>";   
+            echo "<h1>Greöka</h1>";   
         }       
      }
 }

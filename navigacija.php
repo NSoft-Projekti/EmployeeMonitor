@@ -1,5 +1,4 @@
-<?php
-echo '<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -18,4 +17,4 @@ echo '<!DOCTYPE html>
 	</div>
 </div>
 </body>
-</html>';
+</html>

@@ -6,7 +6,6 @@
 <link type="text/css" href="prva_stranica.css" rel="stylesheet"/>
 </head>
 <body>
-
 <div class="container">
 	<div class="form">
 	<form method="POST" action="login.php">
@@ -16,15 +15,14 @@
 		<div class="name">
 					<input type="text" name="username" placeholder="Username"/>
 				</div>
-		<div id="password">
+		<div class="password">
 					<input type="password" name="password" placeholder="Password"/>
 		</div>
 		<div class="login">
-			<a href="navigacija.html"><input type="button" name="button" value="Log in"></a>
+			<a href="navigacija.html"><input type="submit" name="submit" value="Log in"></a>
 		</div>
 	</form>
 	</div>
 </div>
-
 </body>
 </html>

@@ -9,18 +9,25 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
     $surname = $_POST['surname'];
     $emailaddress = $_POST['email'];
     $address = $_POST['address'];
-    $datumrodjenja = $_POST['datum'];
+    
+    $s_year = $_POST['godina'];
+    $s_month = $_POST['mjesec'];
+    $s_day = $_POST['dan'];
+    
+    $datumrodjenja = "$s_year-$s_month-$s_day";
+    
     $spol = $_POST['sex'];
     $grad = $_POST['grad'];
+    $gradId = mysql_query("SELECT gradID from gradovi where naziv = '".$grad."'");
     $rmjesto = $_POST['radno_mjesto'];
-    $datumreg = '2012-2-3';
+    $datumreg = date("Y/m/d");
     
     $checkusername = mysql_query("SELECT * FROM zaposlenici WHERE korisnicko_ime = '".$username."'");
     
     if(mysql_num_rows($checkusername) == 1)
     {
-    	echo "<h1>Greöka</h1>";
-    	echo "<p>To KorisniËko ime veÊ postoji, probajte ponovno.</p>";
+    	echo "<h1>Gre≈°ka</h1>";
+    	echo "<p>To Korisni√®ko ime ve√¶ postoji, probajte ponovno.</p>";
     }
     else
 
@@ -32,11 +39,11 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
         if($registerquery)
         {
             echo "<h1>Uspjeh</h1>";
-            echo "<p>Uspjeöno ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
+            echo "<p>Uspje≈°no ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
         }
         else
         {
-            echo "<h1>Greöka</h1>";   
+            echo "<h1>Gre≈°ka</h1>";   
         }       
      }
 }

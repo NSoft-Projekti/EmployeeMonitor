@@ -9,7 +9,7 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
     $surname = $_POST['surname'];
     $emailaddress = $_POST['email'];
     $address = $_POST['address'];
-    //$datumrodjenja = $_POST['datum'];
+    $datumrodjenja = $_POST['datum'];
     $spol = $_POST['sex'];
     $grad = $_POST['grad'];
     $rmjesto = $_POST['radno_mjesto'];
@@ -26,7 +26,7 @@ if(!empty($_POST['username']) and !empty($_POST['password']))
 
      {
             $registerquery = mysql_query("INSERT INTO zaposlenici (korisnicko_ime,lozinka,ime,prezime,adresa,datum_rodjenja,spol,email,datum_registracije,administrator,gradID,radno_mjestoID)  
-            VALUES('$username', '$password',  '$name', '$surname', '$address', '2013-2-3', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto' )");
+            VALUES('$username', '$password',  '$name', '$surname', '$address', '$datumrodjenja', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto' )");
             
         
         if($registerquery)

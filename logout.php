@@ -1,6 +1,8 @@
 <?php
 
 include 'indeks.php';
+
+
 session_start();
 
 if(!isset($_REQUEST['logmeout'])){

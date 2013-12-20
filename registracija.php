@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php include_once 'indeks.php';?>
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,13 +7,13 @@
 <link type="text/css" href="registracija.css" rel="stylesheet"/>
 </head>
 <body>
-<form action="register.php" method="POST">
+<form action="regster.php" method="POST">
 <div class="container">
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
 <div class="header">
 
-<a href="registracija.html">Registracija</a>
-<a href="lista_korisnika.html">Lista korisnika</a>
+<a href="registracija.php">Registracija</a>
+<a href="">Lista korisnika</a>
 
 </div>
 
@@ -54,20 +55,35 @@ Birthday:
 </select>
 </div>
 <div class="regrm">
-Radno mjesto: <select>
-<option value="direktor"></option>
-<option value="ekonomist"></option>
-<option value="programer"></option>
+Radno mjesto:  <select name="select" class="textfields" id="ddlRadnaMjesta">
+
+<option id="0">--Select--</option>
+
+<?php 
+	$getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
+	while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
+?>
+<option id="<?php echo $viewAllRadnaMjesta['radna_mjestoID'];?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
+<?php } ?>
 
 </select>
 </div>
 <div class="reggrad">
-Grad: <select>
-<option value="mostar"></option>
-<option value="sarajevo"></option>
-<option value="banjaluka"></option>
+Grad: 
+ <select name="select" class="textfields" id="ddlCity">
+
+<option id="0">--Select--</option>
+
+<?php 
+	$getAllCities = mysql_query("SELECT * FROM gradovi;");
+	while($viewAllCities=mysql_fetch_array($getAllCities)){
+?>
+<option id="<?php echo $viewAllCities['gradID'];?>"><?php echo $viewAllCities['naziv'] ?></option>
+<?php } ?>
 
 </select>
+
+
 </div>
 <div class="spol">
 
@@ -88,3 +104,5 @@ Male
 </div>
 </form>
 </body>
+
+</html>

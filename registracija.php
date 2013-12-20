@@ -21,7 +21,7 @@
 <div class="naslov">
 <h1>Registracija korisnika</h1>
 </div>
-<div class="register">
+<div class="reguser">
 <input type="text" name="username" placeholder="Username"/>
 </div>
 <div class="password">

@@ -7,7 +7,7 @@
 <link type="text/css" href="registracija.css" rel="stylesheet"/>
 </head>
 <body>
-<form action="regster.php" method="POST">
+<form action="register.php" method="POST">
 <div class="container">
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
 <div class="header">
@@ -44,18 +44,51 @@
 Birthday:
 </div>
 <div class="dmg">
-<select id="dan">
-<option>Dan:</option>
+<select name="dan" id="dan" stylse="width:70px;">
+<option value="dan">Dan:</option>
+<?php
+for ($i=1; $i<=31; $i++) {
+?>
+<option value="<?php echo $i; ?>">
+<?php echo $i; ?>
+</option>
+<?php
+}
+?>
 </select>
-<select id="mjesec">
-<option>Mjesec:</option>
+
+<select name="mjesec" id="mjesec" style="width:70px;">
+<option value="mjesec">Mjesec:</option>
+<?php
+for ($i=1; $i<=12; $i++) {
+?>
+<option value="<?php echo $i;?>">
+<?php echo $i; ?>
+</option>
+<?php
+}
+?>
 </select>
-<select id="godina">
-<option>Godina:</option>
+
+
+<select name="godina" id="godina" style="width:70px;">
+<option value="godina">Godina:r</option>
+<?php
+$curYear = date('Y');
+for ($i=$curYear; $i>=1950; $i--) {
+?>
+<option value="<?php echo $i; ?>">
+<?php echo $i; ?>
+</option>
+<?php
+}
+?>
 </select>
+
+
 </div>
 <div class="regrm">
-Radno mjesto:  <select name="select" class="textfields" id="ddlRadnaMjesta">
+Radno mjesto:  <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
 <option id="0">--Select--</option>
 
@@ -63,14 +96,14 @@ Radno mjesto:  <select name="select" class="textfields" id="ddlRadnaMjesta">
 	$getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
 	while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
 ?>
-<option id="<?php echo $viewAllRadnaMjesta['radna_mjestoID'];?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
+<option value="<?php echo $viewAllRadnaMjesta['radno_mjestoID']?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
 <?php } ?>
 
 </select>
 </div>
 <div class="reggrad">
 Grad: 
- <select name="select" class="textfields" id="ddlCity">
+ <select name="grad" class="textfields" id="grad">
 
 <option id="0">--Select--</option>
 
@@ -78,7 +111,7 @@ Grad:
 	$getAllCities = mysql_query("SELECT * FROM gradovi;");
 	while($viewAllCities=mysql_fetch_array($getAllCities)){
 ?>
-<option id="<?php echo $viewAllCities['gradID'];?>"><?php echo $viewAllCities['naziv'] ?></option>
+<option value="<?php echo $viewAllCities['gradID']?>"><?php echo $viewAllCities['naziv'] ?></option>
 <?php } ?>
 
 </select>

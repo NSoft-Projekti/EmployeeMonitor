@@ -18,7 +18,7 @@ float:right;
 .headline{
 margin-left:40px;
 }
-.username input{
+.name input{
 width:164px;
 height:35px;
 border-radius:5px;
@@ -29,7 +29,7 @@ margin-left:40px;
 margin-bottom:10px;
 background-color:#F8F8F8 ;
 }
-#password input{
+.password input{
 width:164px;
 height:35px;
 border-radius:5px;

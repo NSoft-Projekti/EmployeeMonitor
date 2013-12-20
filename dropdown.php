@@ -1,4 +1,4 @@
- <select name="select" class="textfields" id="ddlCity">
+<select name="select" class="textfields" id="ddlCity">
 
 <option id="0">--Select City--</option>
 

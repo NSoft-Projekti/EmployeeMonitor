@@ -5,6 +5,75 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <link type="text/css" href="registracija.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script>
+$(document).ready(function(){
+$('#username').keyup(username_check);
+});
+	
+function username_check(){	
+var username = $('#username').val();
+if(username == "" || username.length < 4){
+$('#utick').hide();
+}else{
+
+jQuery.ajax({
+   type: "POST",
+   url: "check.php",
+   data: 'username='+ username,
+   cache: false,
+   success: function(response){
+if(response == 1){
+	$('#utick').hide();
+	$('#ucross').fadeIn();
+	}else{
+	$('#ucross').hide();
+	$('#utick').fadeIn();
+	     }
+
+}
+});
+}
+
+
+
+}
+
+</script>
+<script>
+$(document).ready(function(){
+$('#email').keyup(email_check);
+});
+	
+function email_check(){	
+var email = $('#email').val();
+if(email == "" || email.length < 4){
+$('#etick').hide();
+}else{
+
+jQuery.ajax({
+   type: "POST",
+   url: "echeck.php",
+   data: 'email='+ email,
+   cache: false,
+   success: function(response){
+if(response != 0){
+	$('#etick').hide();
+	$('#ecross').fadeIn();
+	}else{
+	$('#ecross').hide();
+	$('#etick').fadeIn();
+	     }
+
+}
+});
+}
+
+
+
+}
+
+</script>
 </head>
 <body>
 <form action="register.php" method="POST">
@@ -23,7 +92,9 @@
 <h1>Registracija korisnika</h1>
 </div>
 <div class="reguser">
-<input type="text" name="username" placeholder="Username"/>
+<input type="text" id="username" name="username" placeholder="Username"/>
+<img id="utick" src="tick.png" width="16" height="16"/>
+<img id="ucross" src="cross.png" width="16" height="16"/>
 </div>
 <div class="password">
 <input type="password" name="password" placeholder="Password"/>
@@ -35,7 +106,9 @@
 <input type="text" name="surname" placeholder="Surname"/>
 </div>
 <div class="regemail">
-<input type="email" name="email" placeholder="E-mail"/>
+<input type="email" id="email" name="email" placeholder="E-mail"/>
+<img id="etick" src="tick.png" width="16" height="16"/>
+<img id="ecross" src="cross.png" width="16" height="16"/>
 </div>
 <div class="regmjesto">
 <input type="text" name="address" placeholder="Address"/>
@@ -131,7 +204,6 @@ Male
 <a href="#"><input type="submit" name="submit" value="Registracija"/></a>
 </div>
 </div>
-
 
 
 </div>

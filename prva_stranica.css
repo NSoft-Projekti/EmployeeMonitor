@@ -27,7 +27,7 @@ font-size:18px;
 margin-top:10px;
 margin-left:40px;
 margin-bottom:10px;
-background-color:#F8F8F8 ;
+background-color:#F8F8F8;
 }
 .password input{
 width:164px;
@@ -47,6 +47,10 @@ border:1px solid #bdc7d8;
 font-size:12px;
 background-color:#F8F8F8;
 margin-left:40px;
+margin-bottom:30px;
 font-weight:bold;
 float:left;
 }
+.forgot{
+float:left;
+margin-left:40px;}

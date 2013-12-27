@@ -190,3 +190,10 @@ margin-bottom:20px;
 font-size:25px;	
 margin-bottom:15px;
 color:#333;
+}
+
+#utick{display:none}
+#ucross{display:none}
+
+#etick{display:none}
+#ecross{display:none}

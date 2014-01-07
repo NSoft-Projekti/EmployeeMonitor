@@ -10,7 +10,7 @@ include ('indeks.php');
 </head>
 <body>
 
-<form action="Trazi.php" method="post">
+<form action="Trazi.php" method="POST">
     <input type="text" name="query" />
     <input type="submit" value="Search" />
 </form> 

@@ -38,9 +38,9 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
         }
         else {
             // Redirect User
-            //header( 'Location: prva_stranica.php' );
+            //header( 'Location: log_korisnika.php' );
             //exit();
-            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=prva_stranica.php">'; // Header nije htjelo radi pa radi redirect na ovaj nacin.
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=log_korisnika.php">'; // Header nije htjelo radi pa radi redirect na ovaj nacin.
         }
     }
     else

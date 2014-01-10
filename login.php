@@ -7,8 +7,8 @@ include_once 'indeks.php';
 if(!empty($_SESSION['LoggedIn']) and !empty($_SESSION['Username']))
 {
  
-echo '<h1>Samo za Ëlanove</h1>
-     <p>Hvala za logiranje! Vi ste <b></b> a Vaöa email adresa je: <b></b>.</p>';
+echo '<h1>Samo za elanove</h1>
+     <p>Hvala za logiranje! Vi ste <b></b> a Va≈°a email adresa je: <b></b>.</p>';
  
 }
 elseif(!empty($_POST['username']) and !empty($_POST['password']))
@@ -21,22 +21,33 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
     
     if(mysql_num_rows($checklogin) == 1)
     {
-    	$row = mysql_fetch_array($checklogin);
+        $row = mysql_fetch_array($checklogin);
         $email = $row['EmailAddress'];
+        $admin = $row['administrator'];
  
         $_SESSION['Username'] = $username;
         $_SESSION['Emailaddress'] = $email;
         $_SESSION['LoggedIn'] = 1;
+        $_SESSION['Admin'] = 1;
  
-    	echo "<h1>Uspjeh</h1>";
-        echo "<p>äaljemo vas u podruËje za Ëlanove.</p>";
-        echo "";
+        if($admin == 1){
+            // Redirect Admin
+            //header( 'Location: navigacija.php' );
+            //exit();
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=navigacija.php">';  // Header nije htjelo radi pa radi redirect na ovaj nacin.
+        }
+        else {
+            // Redirect User
+            //header( 'Location: prva_stranica.php' );
+            //exit();
+            echo '<META HTTP-EQUIV="Refresh" Content="0; URL=prva_stranica.php">'; // Header nije htjelo radi pa radi redirect na ovaj nacin.
+        }
     }
     else
     {
-    	echo "<h1>Greöka</h1>";
+        echo "<h1>Gre≈°ka</h1>";
         echo "<p>Klik na  <a href=\"login.php\">i probajte ponovno!</a></p>";
     }
 }
-	
+    
 ?>

@@ -205,7 +205,7 @@ Male
 </div>
 
 <div class="registrirajse">
-<a href="#"><input type="submit" name="submit" value="Registracija"/></a>
+    <form action="#"> <input type="submit" name="button2" value="Registracija">  </form>
 </div>
 </div>
 

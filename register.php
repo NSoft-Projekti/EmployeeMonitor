@@ -1,7 +1,7 @@
 <?php
 include ('indeks.php');
 
-if(!empty($_POST['username']) and !empty($_POST['password']))
+if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['password']==$_POST['confirm_password']))
 {
     $username = $_POST['username'];
     $password = $_POST['password'];

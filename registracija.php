@@ -103,6 +103,9 @@ if(response != 0){
 <div class="password">
 <input type="password" name="password" placeholder="Password"/>
 </div>
+<div class="password_again">
+<input type="password" name="password_again" placeholder="Potvrdi lozinku"/>
+</div>		
 <div class="regime">
 <input type="text" name="name" placeholder="Name"/>
 </div>

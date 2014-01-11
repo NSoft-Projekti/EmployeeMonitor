@@ -1,19 +1,22 @@
 <style>
+
 .Table
 {
 /*border: 1px solid #BBBBBB;*/
 border:none;
 /*border-collapse: collapse;*/
 padding: 5px;
+
 }
 
 .Table th
 {
 	
-background-color:#D4ECF7;
+background-color:red;
 padding: 8px 12px;
 font-family:Arial;
 font-size:11px;
+margin-top:20px;
 }
 
 .Table td
@@ -26,10 +29,21 @@ height: 30px;
 }
 .Table .input {
 /*border: 1px solid #BBBBBB;*/ 
-background:#FFFFFF;
+background:blue;
 width: 215px;
 height: 20px;
 }
+body{
+font-family:calibri;
+background:url(pozadina.jpg);
+width:1024px;
+height:600px;
+margin:auto;
+
+}
+
+
+
 </style>
 
 <?php 
@@ -41,8 +55,19 @@ include 'indeks.php';
 <head>
     <title>Search</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" href="registracija1.css" rel="stylesheet"/>
+    <link type="text/css" href="registracija.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="container">
+
+<div class="header">
+<ul>
+<li><a href="registracija.html">Registracija</a></li>
+<li><a href="lista_korisnika.html">Lista korisnika</a></li>
+<li><a href="prva_stranica.php">Log out</a></li>
+</ul>
+</div>
 <form name="name" action='Search.php' method="POST">
 <input type="text" name="query" />
 <input type="submit" name="Search" />
@@ -50,7 +75,6 @@ include 'indeks.php';
 Radno mjesto:  <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
 <option id="0">--Select--</option>
-
 <?php 
 	$getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
 	while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
@@ -65,7 +89,6 @@ Radno mjesto:  <select name="radno_mjesto" class="textfields" id="radno_mjesto">
  
 </body>
 </html>
-
 <?php
 include ('indeks.php');
 
@@ -92,7 +115,7 @@ $min_length = 3;
 		$output="";
 		echo "<table class='Table' border='1px'>";
 		
-		echo "<tr>";
+		echo "<tr bgcolor='6699CC'>";
 		echo "<td>" . "Korisnicko ime" . "</td>";
 		echo "<td>" . "Ime" . "</td>";
 		echo "<td>" . "Prezime" . "</td>";
@@ -119,7 +142,7 @@ $min_length = 3;
 		 		echo "<td>" .htmlspecialchars($results['datum_registracije']) . "</td>";
 		 		
 		echo "<input type='hidden' name='z_id' value=".$results['zaposlenikID'].">";
-		 		echo "<td> <input type='submit' value='Delete'/></td>"; 
+		 		echo "<td><input type='submit' name='submit' value='Delete'></td>"; 
 		 		echo "</form>";
 		 		
 		 		echo "</tr>";
@@ -136,3 +159,4 @@ $min_length = 3;
  }
 			?>
 		
+

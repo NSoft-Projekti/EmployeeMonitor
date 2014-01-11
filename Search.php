@@ -48,18 +48,20 @@ include ('indeks.php');
 <input type="text" name="query" />
 <input type="submit" name="Search" />
 <div class="regrm">
-Radno mjesto:  <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
-<option id="0">--Select--</option>
 
-<?php 
-	$getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
-	while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
-?>
-<option value="<?php echo $viewAllRadnaMjesta['radno_mjestoID']?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
-<?php } ?>
 
+<select name="radno_mjesto"> 
+<option value=" "> Not Selected </option> 
+<option value="Direktor"<?=$_SESSION['queryRadno'] == "Direktor" ? 'selected="selected"' : ''?>> Direktor</option>
+<option value="Programer"><?=$_SESSION['queryRadno'] == "Programer" ? 'selected="selected"' : ''?>> Programer</option>
+<option value="Web dizajner"><?=$_SESSION['queryRadno'] == "Web dizajner" ? 'selected="selected"' : ''?>> Web dizajner</option>
+<option value="Raèunovoða"><?=$_SESSION['queryRadno'] == "Raèunovoða" ? 'selected="selected"' : ''?>> Raèunovoða</option>
+<option value="Održavatelj"><?=$_SESSION['queryRadno'] == "Održavatelj" ? 'selected="selected"' : ''?>> Održavatelj</option>
 </select>
+
+
+
 </div>
 </form> 
 
@@ -68,7 +70,7 @@ Radno mjesto:  <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 </html>
 
 <?php
-include ('indeks.php');
+include 'indeks.php';
 
 $query = $_POST['query'];
 $query1 = $_POST['naziv'];
@@ -81,12 +83,17 @@ $min_length = 3;
 	$query = htmlspecialchars($query);
 	$query = mysql_real_escape_string($query);
 	
-	$query1 = htmlspecialchars($query1);
-	$query1 = mysql_real_escape_string($query1);
+	$queryRadno = htmlspecialchars($queryRadno);
+	$queryRadno = mysql_real_escape_string($queryRadno);
 
-
-	$raw_results = mysql_query("SELECT * FROM zaposlenici
-			WHERE (`korisnicko_ime` LIKE '%".$query."%')  OR (`ime` = '%".$query."%')  OR (`prezime` LIKE '%".$query."%')") or die(mysql_error());
+	$raw_results = mysql_query ("SELECT * FROM zaposlenici
+WHERE (`korisnicko_ime` LIKE '%".$query."%')  OR (`ime` = '%".$query."%')  OR (`prezime` LIKE '%".$query."%')
+	UNION
+	(SELECT * FROM radna_mjesta
+WHERE ('naziv' LIKE '%".queryRadno."%')")
+	
+	or die(mysql_error());
+	
 
 	if(mysql_num_rows($raw_results) > 0)
 	{ 

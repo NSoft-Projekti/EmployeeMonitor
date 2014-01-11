@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <link type="text/css" href="registracija.css" rel="stylesheet"/>
+<link type="text/css" href="registracija1.css" rel="stylesheet"/>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
 <script>
 $(document).ready(function(){
@@ -81,8 +82,11 @@ if(response != 0){
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
 <div class="header">
 
-<a href="registracija.php">Registracija</a>
-<a href="">Lista korisnika</a>
+<ul>
+<li><a href="registracija.html">Registracija</a></li>
+<li><a href="lista_korisnika.html">Lista korisnika</a></li>
+<li><a href="prva_stranica.php">Log out</a></li>
+</ul>
 
 </div>
 

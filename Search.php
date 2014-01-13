@@ -63,9 +63,9 @@ include 'indeks.php';
 
 <div class="header">
 <ul>
-<li><a href="registracija.html">Registracija</a></li>
-<li><a href="lista_korisnika.html">Lista korisnika</a></li>
-<li><a href="prva_stranica.php">Log out</a></li>
+<li><a href="registracija.php">Registracija</a></li>
+<li><a href="search.php">Lista korisnika</a></li>
+<li><a href="logout.php">Log out</a></li>
 </ul>
 </div>
 <form name="name" action='Search.php' method="POST">

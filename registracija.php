@@ -58,7 +58,7 @@ url: "echeck.php",
 data: 'email='+ email,
 cache: false,
 success: function(response){
-if(response != 0){
+if(response == 1){
         $('#etick').hide();
         $('#ecross').fadeIn();
         }else{

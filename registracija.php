@@ -145,7 +145,7 @@ if(response == 1){
 Birthday:
 </div>
 <div class="dmg">
-<select name="dan" id="dan" stylse="width:70px;">
+<select name="dan" id="dan" style="width:70px;">
 <option value="dan">Dan:</option>
 <?php
 for ($i=1; $i<=31; $i++) {

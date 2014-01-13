@@ -1,5 +1,6 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php include_once 'indeks.php';?>
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,7 +18,6 @@ var username = $('#username').val();
 if(username == "" || username.length < 4){
 $('#utick').hide();
 }else{
-
 jQuery.ajax({
 type: "POST",
 url: "check.php",
@@ -31,15 +31,10 @@ if(response == 1){
         $('#ucross').hide();
         $('#utick').fadeIn();
          }
-
 }
 });
 }
-
-
-
 }
-
 </script>
 <script>
 $(document).ready(function(){
@@ -51,7 +46,6 @@ var email = $('#email').val();
 if(email == "" || email.length < 4){
 $('#etick').hide();
 }else{
-
 jQuery.ajax({
 type: "POST",
 url: "echeck.php",
@@ -65,20 +59,16 @@ if(response == 1){
         $('#ecross').hide();
         $('#etick').fadeIn();
          }
-
 }
 });
 }
-
 }
-
 </script>
 <!-- Confirm password -->
 <script>
     function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#confirm_password").val();
-
     if (password != confirmPassword){
     	$("#ptick").hide();
     	$("#pcross").fadeIn();
@@ -88,31 +78,25 @@ if(response == 1){
         $("#ptick").fadeIn();
 	}
 	}
-
 	$(document).ready(function () {
 	   $("#confirm_password").keyup(checkPasswordMatch);
 	   $("#pcross").hide();
 	   $("#ptick").hide();
 	});
 </script>
-
 </head>
 <body>
 <form onSubmit="return validate()" action="register.php" method="POST">
 <div class="container">
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
 <div class="header">
-
 <ul>
-<li><a href="registracija.html">Registracija</a></li>
-<li><a href="lista_korisnika.html">Lista korisnika</a></li>
-<li><a href="prva_stranica.php">Log out</a></li>
+<li><a href="registracija.php">Registracija</a></li>
+<li><a href="search.php">Lista korisnika</a></li>
+<li><a href="logout.php">Log out</a></li>
 </ul>
-
 </div>
-
 <div class="registracija">
-
 <div class="naslov">
 <h1>Registracija korisnika</h1>
 </div>
@@ -157,7 +141,6 @@ for ($i=1; $i<=31; $i++) {
 }
 ?>
 </select>
-
 <select name="mjesec" id="mjesec" style="width:70px;">
 <option value="mjesec">Mjesec:</option>
 <?php
@@ -170,8 +153,6 @@ for ($i=1; $i<=12; $i++) {
 }
 ?>
 </select>
-
-
 <select name="godina" id="godina" style="width:70px;">
 <option value="godina">Godina:r</option>
 <?php
@@ -185,57 +166,41 @@ for ($i=$curYear; $i>=1950; $i--) {
 }
 ?>
 </select>
-
-
 </div>
 <div class="regrm">
 Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
-
 <option id="0">--Select--</option>
-
 <?php
         $getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
         while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
 ?>
 <option value="<?php echo $viewAllRadnaMjesta['radno_mjestoID']?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
 <?php } ?>
-
 </select>
 </div>
 <div class="reggrad">
 Grad:
 <select name="grad" class="textfields" id="grad">
-
 <option id="0">--Select--</option>
-
 <?php
         $getAllCities = mysql_query("SELECT * FROM gradovi;");
         while($viewAllCities=mysql_fetch_array($getAllCities)){
 ?>
 <option value="<?php echo $viewAllCities['gradID']?>"><?php echo $viewAllCities['naziv'] ?></option>
 <?php } ?>
-
 </select>
-
-
 </div>
 <div class="spol">
-
 <input type="radio" name="sex" value="female">
 Female
 <input type="radio" name ="sex" value="male" style="margin-left:15px;"/>
 Male
-
 </div>
-
 <div class="registrirajse">
-<a href="#"><input type="submit" name="submit" value="Registracija"/></a>
+<form action="#"> <input type="submit" name="button2" value="Registracija"></form>
 </div>
 </div>
-
-
 </div>
 </form>
 </body>
-
 </html>

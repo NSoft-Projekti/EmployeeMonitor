@@ -11,13 +11,22 @@ body{
 .header{
     width:1024px;
     height:27px;
-    background:#D8D8D8;
+    background:#CBD9DB;
 }
 
 .registracija{
     background:url('naslovna.jpg');
     width:800px;
     height:590px;
+}
+.prostorija{
+    background:url('pozadina.jpg');
+    width:800px;
+    height:590px;
+}
+.regrm{
+    margin-top:50px;
+    font-size:20px;
 }
 ul
 {
@@ -37,14 +46,14 @@ a:link,a:visited
     width:230px;
     font-weight:bold;
     color:black;
-    background-color:#D8D8D8;
+    background-color:#CBD9DB;
     text-align:center;
     padding:4px;
     text-decoration:none;
 }
 a:hover,a:active
 {
-    background-color:#C0C0C0;
+    background-color:#2DB4C9;
 }
 ul ul {
     display: none;

@@ -115,5 +115,5 @@ $query_room = $_POST['room'];
  
 			?>
 			
-			</body>
+</body>
 </html>

@@ -5,8 +5,6 @@
 
         border:none;
 
-
-
     }
 
     .Table th
@@ -25,14 +23,10 @@
 
         padding: 0 9px;
         height: 30px;
-        background-color:#F8F8F8;
+        background-color:#ECF7F9;
         border:none;
 
     }
-
-
-
-
 
 </style>
 <?php
@@ -52,20 +46,20 @@ include 'indeks.php';
 <div class="container">
     <div class="header">
         <ul>
-            <li><a href="#">Korisnici</a>
+            <li><a href="#">Users</a>
                 <ul>
-                    <li><a href="#">Registriraj korisnika</a></li>
+                    <li><a href="registracija.php">Register</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Pregled svih korisnika</a></li>
+                    <li><a href="#">User list</a></li>
                 </ul>
             </li>
             <li><a href="#">Prostorije</a>
                 <ul>
-                    <li><a href="#">Dodaj novu prostoriju</a></li>
+                    <li><a href="kreiranje_prostorije.php">Create new room</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Pregled svih prostorija</a></li>
+                    <li><a href="lista_prostorija.php">Room list</a></li>
                 </ul>
             </li>
         </ul>

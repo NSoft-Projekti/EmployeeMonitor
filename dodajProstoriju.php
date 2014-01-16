@@ -1,14 +1,14 @@
 <?php
 include_once "indeks.php";
 
-if(!empty($_POST['title']) and !empty($_POST['state']) and !empty($_POST['limitation']) and !empty($_POST['description'])){
-
-	$name = $_POST['title'];
+if(!empty($_POST['name'])  and !empty($_POST['sat']) and !empty($_POST['comment'])){
+//and !empty($_POST['state'])
+	$name = $_POST['name'];
 	//$state= $_POST['state'];
-	$sat = $_POST['limitation'];
-	$comment = $_POST['description'];
+	$sat = $_POST['sat'];
+	$comment = $_POST['comment'];
 
-	$checkroom = mysql_query("SELECT * FROM room WHERE naziv = '".$room."'");
+	$checkroom = mysql_query("SELECT * FROM room WHERE naziv = '".$name."'");
     
     if(mysql_num_rows($checkroom) == 1){
     	echo "<h1>Greska</h1>";
@@ -16,7 +16,7 @@ if(!empty($_POST['title']) and !empty($_POST['state']) and !empty($_POST['limita
     }
     else {
     	$dodajprostorijurquery = mysql_query("INSERT INTO rooms (title,state,limitation,description) 
-    			VALUES('$name', '$_POST('1'),  '$sat', '$comment')");
+    			VALUES('$name', '0',  '$sat', '$comment')");
             
         
         if($dodajprostorijurquery)

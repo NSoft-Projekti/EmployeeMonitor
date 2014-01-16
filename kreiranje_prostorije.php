@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Insert title here</title>
     <link type="text/css" href="kreiranje.css" rel="stylesheet"/>
-    <link type="text/css" href="registracija1.css" rel="stylesheet"/>
+    <link type="text/css" href="navigacija.css" rel="stylesheet"/>
 </head>
 <body>
 <form onSubmit="return validate()" action="dodajProstoriju.php" method="POST">
@@ -13,9 +13,22 @@
 
     <div class="header">
         <ul>
-            <li><a href="registracija.php">Registracija</a></li>
-            <li><a href="search.php">Lista korisnika</a></li>
-            <li><a href="logout.php">Log out</a></li>
+            <li><a href="#">Korisnici</a>
+                <ul>
+                    <li><a href="registracija.php">Registriraj korisnika</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Pregled svih korisnika</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Prostorije</a>
+                <ul>
+                    <li><a href="kreiranje_prostorije.php">Dodaj novu prostoriju</a></li>
+                </ul>
+                <ul>
+                    <li><a href="lista_prostorija.php">Pregled svih prostorija</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
     <div class="naslov">

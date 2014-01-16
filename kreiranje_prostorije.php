@@ -8,6 +8,7 @@
     <link type="text/css" href="registracija1.css" rel="stylesheet"/>
 </head>
 <body>
+<form onSubmit="return validate()" action="dodajProstoriju.php" method="POST">
 <div class="container">
 
     <div class="header">
@@ -41,12 +42,13 @@
         </select>
     </div>
     <div class="opis">
-        <textarea name="comment" form="" >Opis:</textarea>
+        <textarea name="comment" form="comment" >Opis:</textarea>
     </div>
     <div class="registrirajse">
         <form action="#"> <input type="submit" name="button2" value="Dodaj"></form>
     </div>
 
 </div>
+</form>
 </body>
 </html>

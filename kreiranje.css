@@ -24,8 +24,8 @@ body{
     width:30px;
     margin-bottom:30px;
 }
-.naziv{
-    width:100px;
+.naziv input{
+    width:200px;
     height:20px;
     margin-bottom:30px;
 
@@ -34,7 +34,20 @@ body{
     font-size:20px;
     height:50px;
     width:50px;
-}
+    }
 .naslov{
     margin-top:50px;
+    font-size:15px;
+}
+.registrirajse input{
+    margin-top:70px;
+    width:60px;
+    height:27px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:12px;
+    background-color:#CBD9DB;
+    font-weight:bold;
+    float:left;
+
 }

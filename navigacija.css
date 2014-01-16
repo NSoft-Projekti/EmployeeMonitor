@@ -1,22 +1,58 @@
 @CHARSET "ISO-8859-1";
 body{
-font-family:calibri;
+    font-family:calibri;
+
 }
 .container{
-width:1024px;
-height:800px;
-margin:auto;
+    width:1024px;
+    height:800px;
+    margin:auto;
 }
 .header{
-width:1024px;
-height:50px;
-background:white;
+    width:1024px;
+    height:27px;
+    background:#D8D8D8;
 }
 
 .registracija{
-background:url('naslovna.jpg');
-width:800px;
-height:590px;
-
+    background:url('naslovna.jpg');
+    width:800px;
+    height:590px;
+}
+ul
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+li
+{
+    float:left;
+    list-style-type:none;
+}
+a:link,a:visited
+{
+    display:block;
+    width:230px;
+    font-weight:bold;
+    color:black;
+    background-color:#D8D8D8;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+}
+a:hover,a:active
+{
+    background-color:#C0C0C0;
+}
+ul ul {
+    display: none;
 }
 
+ul li:hover > ul {
+    display: block;
+}
+ul li {
+    float: left;
+}

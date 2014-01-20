@@ -51,11 +51,8 @@ ul li {
 	<div class="header">
 		
 <ul>
-<<<<<<< Updated upstream
-<li><a href="update_zaposlenik.php">Osobni podaci</a></li>
-<li><a href="#pregled_vremena">Pregled radnog vremena</a></li>
-=======
-<li><a href="#osobni_podaci">Personal information</a></li>
+
+<li><a href="update_zaposlenik.php">Personal information</a></li>
 <li><a href="#pregled_vremena">Review of working time</a></li>
 >>>>>>> Stashed changes
 </ul>

@@ -40,7 +40,7 @@ background-color:#C0C0C0;
 	<div class="header">
 		
 <ul>
-<li><a href="#osobni_podaci">Osobni podaci</a></li>
+<li><a href="update_zaposlenik.php">Osobni podaci</a></li>
 <li><a href="#pregled_vremena">Pregled radnog vremena</a></li>
 </ul>
 		

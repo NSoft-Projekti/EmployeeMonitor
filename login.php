@@ -24,7 +24,8 @@ elseif(!empty($_POST['username']) and !empty($_POST['password']))
         $row = mysql_fetch_array($checklogin);
         $email = $row['EmailAddress'];
         $admin = $row['administrator'];
- 
+ 		@session_start();
+ 		
         $_SESSION['Username'] = $username;
         $_SESSION['Emailaddress'] = $email;
         $_SESSION['LoggedIn'] = 1;

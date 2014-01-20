@@ -1,0 +1,53 @@
+@CHARSET "ISO-8859-1";
+body{
+    font-family:calibri;
+}
+.container{
+    width:1024px;
+    height:800px;
+    margin:auto;
+    background:url('pozadina.jpg');
+    background-repeat:no-repeat;
+}
+.header{
+    width:1024px;
+    height:30px;
+    background:white;
+}
+.limit{
+    font-size:20px;
+}
+.vrijeme{
+    font-size:20px;
+    padding:5px;
+    height:40px;
+    width:30px;
+    margin-bottom:30px;
+}
+.naziv input{
+    width:200px;
+    height:20px;
+    margin-bottom:30px;
+
+}
+.opis{
+    font-size:20px;
+    height:50px;
+    width:50px;
+    }
+.naslov{
+    margin-top:50px;
+    font-size:15px;
+}
+.registrirajse input{
+    margin-top:70px;
+    width:60px;
+    height:27px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:12px;
+    background-color:#CBD9DB;
+    font-weight:bold;
+    float:left;
+
+}

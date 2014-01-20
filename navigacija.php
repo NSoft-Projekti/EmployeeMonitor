@@ -10,20 +10,20 @@
 <div class="container">
     <div class="header">
         <ul>
-            <li><a href="#">Users</a>
+            <li><a href="#">Korisnici</a>
                 <ul>
-                    <li><a href="user_registration.php">Register users</a></li>
+                    <li><a href="#">Registriraj korisnika</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Users rewiev</a></li>
+                    <li><a href="#">Pregled svih korisnika</a></li>
                 </ul>
             </li>
-            <li><a href="#">Rooms</a>
+            <li><a href="#">Prostorije</a>
                 <ul>
-                    <li><a href="kreiranje_prostorije.php">Add new room</a></li>
+                    <li><a href="#">Dodaj novu prostoriju</a></li>
                 </ul>
                 <ul>
-                    <li><a href="lista_prostorija.php">Rooms rewiev</a></li>
+                    <li><a href="#">Pregled svih prostorija</a></li>
                 </ul>
             </li>
         </ul>

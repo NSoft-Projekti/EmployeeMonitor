@@ -93,10 +93,10 @@ if(response == 1){
 <ul>
 			<li><a href="#">Users</a>
 				<ul>
-					<li><a href="#">Register users</a></li>
+					<li><a href="#">Register user</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">Users rewiev</a></li>
+					<li><a href="#">User list</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Rooms</a>
@@ -104,7 +104,7 @@ if(response == 1){
 					<li><a href="#">Add new room</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">Rooms rewiev</a></li>
+					<li><a href="#">Room list</a></li>
 				</ul>
 			</li>
 		</ul>

@@ -13,12 +13,12 @@ if (!$conn){
 	exit("Povezivnje na bazu nije uspjelo: " . $conn);
 }
 
-echo("Povezivanje na bazu je uspjelo.");
+
 
 /* Odabir baze. */
 $res = mysql_select_db($mysql_database);
 
 if (!$res){
-	exit("Nije moguæe izabrati bazu");
+	exit("Nije moguï¿½e izabrati bazu");
 }
 ?>

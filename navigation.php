@@ -15,7 +15,7 @@
 					<li><a href="#">Register user</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">Users rewiev</a></li>
+					<li><a href="#">User list</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Rooms</a>
@@ -23,7 +23,7 @@
 					<li><a href="#">Add new room</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">Rooms rewiev</a></li>
+					<li><a href="#">Room list</a></li>
 				</ul>
 			</li>
 		</ul>

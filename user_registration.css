@@ -2,6 +2,51 @@
 body{
 font-family:calibri;
 }
+.header{
+width:1024px;
+height:27px;
+background:#CBD9DB;
+}
+
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+li
+{
+float:left;
+list-style-type:none;
+}
+a:link,a:visited
+{
+display:block;
+width:230px;
+font-weight:bold;
+color:black;
+background-color:#CBD9DB;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+a:hover,a:active
+{
+background-color:#2DB4C9;
+}
+ ul ul {
+	display: none;
+}
+
+ul li:hover > ul {
+		display: block;
+	}
+text-transform: lowercase;	
+ul li {
+	float: left;
+	}
+
 .container{
 width:1024px;
 height:800px;
@@ -9,14 +54,7 @@ margin:auto;
 background:url('pozadina.jpg');
 background-repeat:no-repeat;
 }
-.header{
-width:1024px;
-height:30px;
-background:white;
-}
-
-
-.registracija{
+.registration{
 height:690px;
 width:280px;
 background:white;
@@ -25,7 +63,6 @@ margin-left:150px;
 margin-top:60px;	
 }
 .reguser input{
-
 width:200px;
 height:20px;
 border-radius:5px;
@@ -35,8 +72,7 @@ font-size:15px;
 margin-bottom:10px;
 
 }
-.regime input{
-
+.name input{
 width:200px;
 height:20px;
 border-radius:5px;
@@ -46,8 +82,7 @@ font-size:15px;
 margin-right:10px;
 margin-bottom:10px;
 }
-.regprezime input{
-
+.surname input{
 width:200px;
 height:20px;
 border-radius:5px;
@@ -56,8 +91,7 @@ padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
 }
-.regmjesto input{
-
+.address input{
 width:200px;
 height:20px;
 border-radius:5px;
@@ -66,9 +100,7 @@ padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
 }
-
-.regemail input{
-
+.email input{
 width:200px;
 height:20px;
 border-radius:5px;
@@ -77,10 +109,7 @@ padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
 }
-
-
-
-.datumrodjenja{
+.birth{
 height:20px;
 width:200;
 color:black;
@@ -90,9 +119,7 @@ margin-bottom:15px;
 margin-top:3px;
 overflow:auto;
 }
-
 .password input{
-
 width:200px;
 height:20px;
 border-radius:5px;
@@ -101,9 +128,7 @@ padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
 }
-
 .password_again input{
-
 width:200px;
 height:20px;
 border-radius:5px;
@@ -112,7 +137,6 @@ padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
 }
-
 .regrm input{
 width:200px;
 height:20px;
@@ -123,9 +147,7 @@ margin-top:15px;
 font-size:15px;
 margin-bottom:20px;
 }
-
 .reggrad input{
-
 height:20px;
 width:200;
 color:black;
@@ -134,12 +156,10 @@ font-weight:normal;
 margin-bottom:15px;
 margin-top:25px;
 }
-
 .dmg
 {
 width:300px;
 margin-bottom:10px; 
-
 }
 #dan{
 font-size:13px;
@@ -162,7 +182,6 @@ height:30px;
 margin:2px 0 0 0;
 border:1px solid #bdc7d8;
 }
-
 .spol
 {
 font-weight:bold;
@@ -173,28 +192,20 @@ width:200px;
 height:20px;
 margin:13px 0 10px 0;
 }
-
 .registrirajse input{
-
-width:130px;
-height:35px;
-background-color:silver;
-border:1px solid #3b6e22;
+width:100px;
+height:30px;
+background-color:#F8F8F8;
+border:1px solid #bdc7d8;
 border-radius:5px;
 margin-top:5px;
 margin-bottom:20px;
 font-weight:bold;
-font-size:17px;
+font-size:14px;
 color:black;
 padding:7px 20px;
 text-align:center;
 cursor:pointer;
-}
-.registrirajse{
-border-bottom:1px solid #a0a9c0;
-width:200px;
-margin-top:30px;
-margin-bottom:20px;
 }
 
 .registracija h1{

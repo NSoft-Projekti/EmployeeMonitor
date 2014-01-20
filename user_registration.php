@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
-<link type="text/css" href="registracija.css" rel="stylesheet"/>
-<link type="text/css" href="registracija1.css" rel="stylesheet"/>
+<link type="text/css" href="user_registration.css" rel="stylesheet"/>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
 <script>
 $(document).ready(function(){
@@ -91,14 +91,27 @@ if(response == 1){
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
 <div class="header">
 <ul>
-<li><a href="registracija.php">Registracija</a></li>
-<li><a href="search.php">Lista korisnika</a></li>
-<li><a href="logout.php">Log out</a></li>
-</ul>
+			<li><a href="#">Users</a>
+				<ul>
+					<li><a href="#">Register users</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Users rewiev</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Rooms</a>
+				<ul>
+					<li><a href="#">Add new room</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Rooms rewiev</a></li>
+				</ul>
+			</li>
+		</ul>
 </div>
-<div class="registracija">
-<div class="naslov">
-<h1>Registracija korisnika</h1>
+<div class="registration">
+<div class="headline">
+<h1>User registration</h1>
 </div>
 <div class="reguser">
 <input type="text" id="username" name="username" placeholder="Username"/>
@@ -111,21 +124,21 @@ if(response == 1){
 <img id="ptick" src="tick.png" width="16" height="16"/>
 <img id="pcross" src="cross.png" width="16" height="16"/>
 </div>
-<div class="regime">
+<div class="name">
 <input type="text" name="name" placeholder="Name"/>
 </div>
-<div class="regprezime">
+<div class="surname">
 <input type="text" name="surname" placeholder="Surname"/>
 </div>
-<div class="regemail">
+<div class="email">
 <input type="email" id="email" name="email" placeholder="E-mail"/>
 <img id="etick" src="tick.png" width="16" height="16"/>
 <img id="ecross" src="cross.png" width="16" height="16"/>
 </div>
-<div class="regmjesto">
+<div class="address">
 <input type="text" name="address" placeholder="Address"/>
 </div>
-<div class="datumrodjenja">
+<div class="birth">
 Birthday:
 </div>
 <div class="dmg">
@@ -141,7 +154,7 @@ for ($i=1; $i<=31; $i++) {
 }
 ?>
 </select>
-<select name="mjesec" id="mjesec" style="width:70px;">
+<select name="mjesec" id="mjesec" style="width:90px;">
 <option value="mjesec">Mjesec:</option>
 <?php
 for ($i=1; $i<=12; $i++) {
@@ -153,8 +166,8 @@ for ($i=1; $i<=12; $i++) {
 }
 ?>
 </select>
-<select name="godina" id="godina" style="width:70px;">
-<option value="godina">Godina:r</option>
+<select name="godina" id="godina" style="width:80px;">
+<option value="godina">Godina:</option>
 <?php
 $curYear = date('Y');
 for ($i=$curYear; $i>=1950; $i--) {
@@ -168,7 +181,7 @@ for ($i=$curYear; $i>=1950; $i--) {
 </select>
 </div>
 <div class="regrm">
-Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
+Work position: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 <option id="0">--Select--</option>
 <?php
         $getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
@@ -179,7 +192,7 @@ Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 </select>
 </div>
 <div class="reggrad">
-Grad:
+Town:
 <select name="grad" class="textfields" id="grad">
 <option id="0">--Select--</option>
 <?php
@@ -197,7 +210,7 @@ Female
 Male
 </div>
 <div class="registrirajse">
-<form action="#"> <input type="submit" name="button2" value="Registracija"></form>
+<form action="#"> <input type="submit" name="button2" value="Register"></form>
 </div>
 </div>
 </div>

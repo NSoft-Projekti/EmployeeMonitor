@@ -11,6 +11,7 @@ list-style-type:none;
 margin:0;
 padding:0;
 overflow:hidden;
+font-size:18px;
 }
 li
 {
@@ -18,19 +19,29 @@ float:left;
 }
 a:link,a:visited
 {
-display:block;
-width:400px;
-font-weight:bold;
-color:black;
-background-color:#D8D8D8;
-text-align:center;
-padding:4px;
-text-decoration:none;
-text-transform:uppercase;
+    display:block;
+    width:230px;
+    font-weight:bold;
+    color:black;
+    background-color:#CBD9DB;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
 }
 a:hover,a:active
 {
-background-color:#C0C0C0;
+    background-color:#2DB4C9;
+}
+ul ul {
+    display: none;
+}
+
+ul li:hover > ul {
+    display: block;
+}
+text-transform: lowercase;
+ul li {
+    float: left;
 }
 
 </style>
@@ -40,8 +51,13 @@ background-color:#C0C0C0;
 	<div class="header">
 		
 <ul>
+<<<<<<< Updated upstream
 <li><a href="update_zaposlenik.php">Osobni podaci</a></li>
 <li><a href="#pregled_vremena">Pregled radnog vremena</a></li>
+=======
+<li><a href="#osobni_podaci">Personal information</a></li>
+<li><a href="#pregled_vremena">Review of working time</a></li>
+>>>>>>> Stashed changes
 </ul>
 		
 	</div>

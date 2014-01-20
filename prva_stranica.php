@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <link type="text/css" href="prva_stranica.css" rel="stylesheet"/>
+
 </head>
 <body>
 <div class="container">
@@ -25,6 +26,7 @@
 		<a href="forgot_pass.php">Forgot your password?</a>
 		</div>
 	</form>
+
 	
 	</div>
 	

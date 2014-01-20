@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <link type="text/css" href="log_korisnika.css" rel="stylesheet"/>
+    <script language="javascript">
+        timer=setTimeout("window.open('popout.php','','width=300, height=250, menubar = NO, resizable = NO, status = NO, toolbar = NO, location=0, left=400, top=200')",3000)
+    </script>
 <style>
 ul
 {

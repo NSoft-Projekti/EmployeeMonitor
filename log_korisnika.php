@@ -54,7 +54,7 @@ ul li {
 
 <li><a href="update_zaposlenik.php">Personal information</a></li>
 <li><a href="#pregled_vremena">Review of working time</a></li>
->>>>>>> Stashed changes
+
 </ul>
 		
 	</div>

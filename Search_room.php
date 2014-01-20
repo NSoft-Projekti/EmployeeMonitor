@@ -68,17 +68,26 @@ $query_room = $_POST['room'];
 	$query_room = htmlspecialchars($query_room);
 	$query_room = mysql_real_escape_string($query_room);
 	
-
-
-
-	$raw_results = mysql_query("SELECT * FROM rooms WHERE roomID = '$query_room' ") or die(mysql_error());
-
+	
+		
+    
+    if(empty($query_room)==false)
+    {
+    	$query=("SELECT * FROM rooms WHERE roomID = '$query_room' ");
+    }
+     else
+    {
+    	$query="SELECT * FROM rooms";
+    }
+    
+    $raw_results = mysql_query($query);
+    
 	if(mysql_num_rows($raw_results) > 0)
 	{ 
 		$output="";
 		echo "<table class='Table' border='1px'>";
 		
-		echo "<tr>";
+		echo "<tr bgcolor='#CAEDF7'>";
 		echo "<td>" . "Title" . "</td>";
 		echo "<td>" . "State" . "</td>";
 		echo "<td>" . "Limitation" . "</td>";
@@ -90,7 +99,7 @@ $query_room = $_POST['room'];
 		{
 		
 			{
-				  	//	echo "<form action='deleteZaposlenikById.php' method ='GET'>";
+				  		echo "<form action='DeleteRoom.php' method ='GET'>";
 				  		
 		 		echo "<tr>";
 		 		echo "<td>" .htmlspecialchars($results['title'] ). "</td>";
@@ -99,8 +108,8 @@ $query_room = $_POST['room'];
 		 		echo "<td>" .htmlspecialchars($results['description'] ). "</td>";
 		 		
 		 		
-		//echo "<input type='hidden' name='z_id' value=".$results['prostorijaID'].">";
-		 //		echo "<td> <input type='submit' value='Delete'/></td>"; 
+		echo "<input type='hidden' name='r_id' value=".$results['roomID'].">";
+		echo "<td> <input type='submit' value='Delete'/></td>"; 
 		 echo "</form>";
 		 		
 		 		echo "</tr>";

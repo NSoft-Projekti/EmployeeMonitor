@@ -8,7 +8,7 @@
     <link type="text/css" href="navigacija.css" rel="stylesheet"/>
 </head>
 <body>
-<form onSubmit="return validate()" action="dodajProstoriju.php" method="POST">
+<form action="dodajProstoriju.php" method="POST">
 <div class="container">
 
     <div class="header">

@@ -9,7 +9,15 @@
 
 <div class="container">
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
+<div class="header">
+    <ul>
 
+        <li><a href="update_zaposlenik.php">Personal information</a></li>
+        <li><a href="#pregled_vremena">Working time review</a></li>
+        <li><a href="logout.php">Log out</a></li>
+
+    </ul>
+</div>
 <?php
 include 'indeks.php';
 @session_start();
@@ -57,7 +65,7 @@ $total_elmt = count ( $roll );
 <div class="registration">
 
 <div class="headline">
-<h1>Update korisnika</h1>
+<h1>User information</h1>
 
 </div>
 <div class="reguser">
@@ -67,7 +75,7 @@ $total_elmt = count ( $roll );
 </div>
 
 <div class="password">
-<input type="text" name="password" value="<?php echo htmlentities($password); ?>" /><br />
+<input type="text" name="password" value="<?php echo htmlentities($password); ?>"/><br />
 </div>
 
 <div class="name">

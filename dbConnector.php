@@ -8,7 +8,7 @@ var $link;
 function DbConnector(){
 
         // Get the main settings from the array we just loaded
-        $host = 'pip.intera.ba:13306';
+        $host = '10.0.0.250';
         $db = 'employeemonitor';
         $user = 'root';
         $pass = 'mojapraksa';

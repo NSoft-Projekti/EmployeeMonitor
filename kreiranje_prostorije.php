@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Insert title here</title>
     <link type="text/css" href="kreiranje.css" rel="stylesheet"/>
-    <link type="text/css" href="navigacija.css" rel="stylesheet"/>
+    <link type="text/css" href="navigation.css" rel="stylesheet"/>
 </head>
 <body>
 <form action="dodajProstoriju.php" method="POST">

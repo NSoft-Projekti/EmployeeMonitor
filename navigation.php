@@ -26,6 +26,7 @@
 					<li><a href="#">Room list</a></li>
 				</ul>
 			</li>
+            <li><a href="logout.php">Log out</a></li>
 		</ul>
 	</div>
 	<div class="registration">

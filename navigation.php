@@ -29,6 +29,7 @@
             <li><a href="logout.php">Log out</a></li>
 		</ul>
 	</div>
+
 	<div class="registration">
 	</div>
 	

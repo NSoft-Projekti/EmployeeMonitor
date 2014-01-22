@@ -15,7 +15,7 @@
         <ul>
             <li><a href="#">Users</a>
                 <ul>
-                    <li><a href="user_registration.php">Register</a></li>
+                    <li><a href="registracija.php">Register</a></li>
                 </ul>
                 <ul>
                     <li><a href="#">User list</a></li>
@@ -41,7 +41,7 @@
         Limit:
     </div>
     <div class="vrijeme">
-        <select name="sat" id="sat" style="width:70px;">
+        <select name="limitation" id="limitation" style="width:70px;">
             <option value="sat">Time:</option>
             <?php
             for ($i=15; $i<=20; $i++) {
@@ -55,7 +55,7 @@
         </select>
     </div>
     <div class="opis">Description:
-       <textarea name="Komentar" rows=4 cols=25 wrap=physical></textarea>
+       <textarea name="description" rows=4 cols=25 wrap=physical></textarea>
     </div>
     <div class="registrirajse">
         <form action="#"> <input type="submit" id="button2" name="button2" value="Add"></form>

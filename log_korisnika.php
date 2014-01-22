@@ -63,7 +63,7 @@ ul li {
 <ul>
 
 <li><a href="update_zaposlenik.php">Personal information</a></li>
-<li><a href="#pregled_vremena">Review of working time</a></li>
+<li><a href="#pregled_vremena">Working time review</a></li>
 <li><a href="logout.php">Log out</a></li>
 
 </ul>

@@ -15,7 +15,7 @@
         <ul>
             <li><a href="#">Users</a>
                 <ul>
-                    <li><a href="registracija.php">Register</a></li>
+                    <li><a href="user_registration.php">Register</a></li>
                 </ul>
                 <ul>
                     <li><a href="#">User list</a></li>

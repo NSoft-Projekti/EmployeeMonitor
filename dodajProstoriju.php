@@ -10,7 +10,7 @@ if(!empty($_POST['name'])  and !empty($_POST['limitation']) and !empty($_POST['d
 
 	$checkroom = mysql_query("SELECT * FROM rooms WHERE title = '".$name."'");
   
-    if(mysql_num_rows($checkroom) == 1){
+    if(mysql_num_rows($checkroom) != 0){
     	echo "<h1>Greska</h1>";
     	echo "<p>Ta prostorija je vec u bazi.</p>";
     }

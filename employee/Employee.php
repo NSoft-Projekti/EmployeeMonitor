@@ -62,7 +62,7 @@ ul li {
 		
 <ul>
 
-<li><a href="../includes/functions/UpdateEmployee.php">Personal information</a></li>
+<li><a href="UpdateEmployee.php">Personal information</a></li>
 <li><a href="#pregled_vremena">Working time review</a></li>
 <li><a href="../includes/functions/logout.php">Log out</a></li>
 
@@ -76,7 +76,7 @@ ul li {
 <div id="rooms" class="rooms">
     <h1>Please, choose room!</h1>
 
-    <form action="../room/Search.php" method="post">
+    <form action="Employee.php" method="post">
         <div class="regrm">
 
             Select room:  <select name="room" class="textfields" id="room">

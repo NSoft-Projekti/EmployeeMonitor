@@ -152,10 +152,10 @@ Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
         $getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
         while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
 			if($viewAllRadnaMjesta['PositionID']==$positionId){
-				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' selected>'.$viewAllRadnaMjesta['naziv']. '</option>';
+				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' selected>'.$viewAllRadnaMjesta['Name']. '</option>';
 			}
 			else{
-				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' >'.$viewAllRadnaMjesta['naziv']. '</option>';
+				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' >'.$viewAllRadnaMjesta['Name']. '</option>';
 			}
 		}
 	

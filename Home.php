@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 	<div class="form">
-	<form method="POST" action="includes/functions/login.php">
+	<form method="POST" action="login.php">
 		<div class="headline">
 			<h1>Log in</h1>
 		</div>	
@@ -20,13 +20,12 @@
 					<input type="password" name="password" placeholder="Password"/>
 		</div>
 		<div class="login">
-			<input type="submit" name="submit" value="Log in">
+			<a href="navigacija.html"><input type="submit" name="submit" value="Log in"></a> 
 		</div>
 		<div class="forgot">
 		<a href="forgot_pass.php">Forgot your password?</a>
 		</div>
 	</form>
-
 	
 	</div>
 	

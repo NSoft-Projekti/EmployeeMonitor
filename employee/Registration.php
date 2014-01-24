@@ -1,16 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php include '../includes/indeks.php';?>
+<?php include_once '../includes/indeks.php';?>
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Employee Monitor</title>
-	<link type="text/css" href="../assets/css/registration.css"
-		rel="stylesheet" />
+<title>Insert title here</title>
+<link type="text/css" href="../assets/css/registration.css" rel="stylesheet"/>
 
-	<script type="text/javascript"
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
-	<script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<script>
 $(document).ready(function(){
 $('#username').keyup(username_check);
 });
@@ -22,7 +20,7 @@ $('#utick').hide();
 }else{
 jQuery.ajax({
 type: "POST",
-url: "../includes/validation/check.php",
+url: "check.php",
 data: 'username='+ username,
 cache: false,
 success: function(response){
@@ -38,7 +36,7 @@ if(response == 1){
 }
 }
 </script>
-	<script>
+<script>
 $(document).ready(function(){
 $('#email').keyup(email_check);
 });
@@ -50,7 +48,7 @@ $('#etick').hide();
 }else{
 jQuery.ajax({
 type: "POST",
-url: "../includes/validation/echeck.php",
+url: "echeck.php",
 data: 'email='+ email,
 cache: false,
 success: function(response){
@@ -66,8 +64,8 @@ if(response == 1){
 }
 }
 </script>
-	<!-- Confirm password -->
-	<script>
+<!-- Confirm password -->
+<script>
     function checkPasswordMatch() {
     var password = $("#password").val();
     var confirmPassword = $("#confirm_password").val();
@@ -86,96 +84,95 @@ if(response == 1){
 	   $("#ptick").hide();
 	});
 </script>
-
 </head>
 <body>
-	<form onSubmit="return validate()" action="functions/register.php" method="post">
-		<div class="container">
-			<img src="http://placehold.it/200x200"
-				style="padding-right: 40px; padding-top: 60px;" align="right">
-				<div class="header">
-					<ul>
-						<li><a href="#">Users</a>
-							<ul>
-								<li><a href="Registration.php">Register employee</a></li>
-							</ul>
-							<ul>
-								<li><a href="#">Employee list</a></li>
-							</ul></li>
-						<li><a href="#">Rooms</a>
-							<ul>
-								<li><a href="../room/Add.php">Add new room</a></li>
-							</ul>
-							<ul>
-								<li><a href="../room/Search.php">Room list</a></li>
-							</ul></li>
-						<li><a href="../includes/functions/logout.php">Log out</a></li>
-					</ul>
-				</div>
-				<div class="registration">
-					<div class="headline">
-						<h1>User registration</h1>
-					</div>
-					<div class="reguser">
-						<input type="text" id="username" name="username"
-							placeholder="Username" /> <img id="utick"
-							src="../assets/img/tick.png" width="16" height="16" /> <img
-							id="ucross" src="../assets/img/cross.png" width="16" height="16" />
-					</div>
-					<div class="password">
-						<input type="password" id="password" name="password"
-							placeholder="Password" /> <input type="password"
-							id="confirm_password" name="confirm_password"
-							onChange="checkPasswordMatch();" placeholder="Confirm Password" />
-						<img id="ptick" src="../assets/img/tick.png" width="16"
-							height="16" /> <img id="pcross" src="../assets/img/cross.png"
-							width="16" height="16" />
-					</div>
-					<div class="name">
-						<input type="text" name="name" placeholder="Name" />
-					</div>
-					<div class="surname">
-						<input type="text" name="surname" placeholder="Surname" />
-					</div>
-					<div class="email">
-						<input type="email" id="email" name="email" placeholder="E-mail" />
-						<img id="etick" src="../assets/img/tick.png" width="16"
-							height="16" /> <img id="ecross" src="../assets/img/cross.png"
-							width="16" height="16" />
-					</div>
-					<div class="address">
-						<input type="text" name="address" placeholder="Address" />
-					</div>
-					<div class="birth">Birthday:</div>
-					<div class="dmg">
-						<select name="dan" id="dan" style="width: 70px;">
-							<option value="dan">Dan:</option>
+<form onSubmit="return validate()" action="functions/register.php" method="POST">
+<div class="container">
+<img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right" >
+<div class="header">
+<ul>
+			<li><a href="#">Users</a>
+				<ul>
+					<li><a href="user_registration.php">Register user</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">User list</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Rooms</a>
+				<ul>
+					<li><a href="kreiranje_prostorije.php">Add new room</a></li>
+				</ul>
+				<ul>
+					<li><a href="lista_prostorija.php">Room list</a></li>
+				</ul>
+			</li>
+            <li><a href="logout.php">Log out</a></li>
+		</ul>
+</div>
+<div class="registration">
+<div class="headline">
+<h1>User registration</h1>
+</div>
+<div class="reguser">
+<input type="text" id="username" name="username" placeholder="Username"/>
+<img id="utick" src="tick.png" width="16" height="16"/>
+<img id="ucross" src="cross.png" width="16" height="16"/>
+</div>
+<div class="password">
+<input type="password" id="password" name="password" placeholder="Password"/>
+<input type="password" id="confirm_password" name="confirm_password" onChange="checkPasswordMatch();" placeholder="Confirm Password"/>
+<img id="ptick" src="tick.png" width="16" height="16"/>
+<img id="pcross" src="cross.png" width="16" height="16"/>
+</div>
+<div class="name">
+<input type="text" name="name" placeholder="Name"/>
+</div>
+<div class="lastname">
+<input type="text" name="surname" placeholder="Last name"/>
+</div>
+<div class="email">
+<input type="email" id="email" name="email" placeholder="E-mail"/>
+<img id="etick" src="tick.png" width="16" height="16"/>
+<img id="ecross" src="cross.png" width="16" height="16"/>
+</div>
+<div class="address">
+<input type="text" name="address" placeholder="Address"/>
+</div>
+<div class="birth">
+Date of Birth
+</div>
+<div class="dmg">
+<select name="dan" id="dan" >
+<option value="dan">Day</option>
 <?php
-for($i = 1; $i <= 31; $i ++) {
-	?>
+for ($i=1; $i<=31; $i++) {
+?>
 <option value="<?php echo $i; ?>">
 <?php echo $i; ?>
 </option>
 <?php
 }
 ?>
-</select> <select name="mjesec" id="mjesec" style="width: 90px;">
-							<option value="mjesec">Mjesec:</option>
+</select>
+<select name="mjesec" id="mjesec" >
+<option value="mjesec">Month</option>
 <?php
-for($i = 1; $i <= 12; $i ++) {
-	?>
+for ($i=1; $i<=12; $i++) {
+?>
 <option value="<?php echo $i;?>">
 <?php echo $i; ?>
 </option>
 <?php
 }
 ?>
-</select> <select name="godina" id="godina" style="width: 80px;">
-							<option value="godina">Godina:</option>
+</select>
+<select name="godina" id="godina" >
+<option value="godina">Year</option>
 <?php
-$curYear = date ( 'Y' );
-for($i = $curYear; $i >= 1950; $i --) {
-	?>
+$curYear = date('Y');
+for ($i=$curYear; $i>=1950; $i--) {
+?>
 <option value="<?php echo $i; ?>">
 <?php echo $i; ?>
 </option>
@@ -183,43 +180,41 @@ for($i = $curYear; $i >= 1950; $i --) {
 }
 ?>
 </select>
-					</div>
-					<div class="regrm">
-						Work position: <select name="radno_mjesto" class="textfields"
-							id="radno_mjesto">
-							<option id="0">--Select--</option>
+</div>
+<div class="regrm">
+<select name="radno_mjesto" class="textfields" id="radno_mjesto">
+<option id="0">Work position</option>
 <?php
-$getAllRadnaMjesta = mysql_query ( "SELECT * FROM positions;" );
-while ( $viewAllRadnaMjesta = mysql_fetch_array ( $getAllRadnaMjesta ) ) {
-	?>
-<option value="<?php echo $viewAllRadnaMjesta['PositionID']?>"><?php echo $viewAllRadnaMjesta['Name'] ?></option>
+        $getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
+        while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
+?>
+<option value="<?php echo $viewAllRadnaMjesta['radno_mjestoID']?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
 <?php } ?>
 </select>
-					</div>
-					<div class="reggrad">
-						Town: <select name="grad" class="textfields" id="grad">
-							<option id="0">--Select--</option>
+</div>
+<div class="reggrad">
+
+<select name="grad" class="textfields" id="grad">
+<option id="0">Town</option>
 <?php
-$getAllCities = mysql_query ( "SELECT * FROM cities;" );
-while ( $viewAllCities = mysql_fetch_array ( $getAllCities ) ) {
-	?>
-<option value="<?php echo $viewAllCities['CityID']?>"><?php echo $viewAllCities['Name'] ?></option>
+        $getAllCities = mysql_query("SELECT * FROM gradovi;");
+        while($viewAllCities=mysql_fetch_array($getAllCities)){
+?>
+<option value="<?php echo $viewAllCities['gradID']?>"><?php echo $viewAllCities['naziv'] ?></option>
 <?php } ?>
 </select>
-					</div>
-					<div class="spol">
-						<input type="radio" name="sex" value="female"> Female <input
-							type="radio" name="sex" value="male" style="margin-left: 15px;" />
-							Male 
-					
-					</div>
-					<div class="registrirajse">
-						<input type="submit" name="button2" value="Register">
-					
-					</div>
-				</div>
-		
-		</div>
-	</form>
+</div>
+<div class="spol">
+<input type="radio" name="sex" value="female">
+Female
+<input type="radio" name ="sex" value="male" style="margin-left:15px;"/>
+Male
+</div>
+<div class="registrirajse">
+<form action="#"> <input type="submit" name="button2" value="Register"></form>
+</div>
+</div>
+</div>
+</form>
 </body>
 </html>

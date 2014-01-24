@@ -6,7 +6,7 @@ body{
     width:1024px;
     height:800px;
     margin:auto;
-    background:url('pozadina.jpg');
+    background:url('../img/pozadina.jpg');
     background-repeat:no-repeat;
 }
 .header{

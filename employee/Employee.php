@@ -1,15 +1,15 @@
 <?php
-include 'indeks.php';
+include '../includes/indeks.php';
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Employee Monitor</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="jquery.bpopup.js"></script>
-<link type="text/css" href="log_korisnika.css" rel="stylesheet"/>
+    <script src="../assets/js/jquery.bpopup.js"></script>
+<link type="text/css" href="../assets/css/employee.css" rel="stylesheet"/>
 
 <style>
 ul
@@ -62,9 +62,9 @@ ul li {
 		
 <ul>
 
-<li><a href="update_zaposlenik.php">Personal information</a></li>
+<li><a href="../includes/functions/UpdateEmployee.php">Personal information</a></li>
 <li><a href="#pregled_vremena">Working time review</a></li>
-<li><a href="logout.php">Log out</a></li>
+<li><a href="../includes/functions/logout.php">Log out</a></li>
 
 </ul>
 		
@@ -73,10 +73,10 @@ ul li {
 	</div>
 </div>
 
-<div id="prostorija" class="prostorija">
+<div id="rooms" class="rooms">
     <h1>Please, choose room!</h1>
 
-    <form action="Search_room.php" method="post">
+    <form action="../room/Search.php" method="post">
         <div class="regrm">
 
             Select room:  <select name="room" class="textfields" id="room">
@@ -85,7 +85,7 @@ ul li {
                 <?php
                 $getAllRooms = mysql_query("SELECT * FROM rooms;");
                 while($viewAllRooms=mysql_fetch_array($getAllRooms)){
-                    echo "<option value=".$viewAllRooms['roomID'].">".$viewAllRooms['title']."</option>";
+                    echo "<option value=".$viewAllRooms['RoomID'].">".$viewAllRooms['Name']."</option>";
                 }
                 ?>
             </select>
@@ -94,7 +94,7 @@ ul li {
     </form>
 
     <?php
-    include ('indeks.php');
+    include_once ('../includes/indeks.php');
 
     $query_room = $_POST['room'];
 
@@ -102,12 +102,12 @@ ul li {
     $query_room = htmlspecialchars($query_room);
     $query_room = mysql_real_escape_string($query_room);
 
-    $raw_results = mysql_query("SELECT * FROM rooms WHERE roomID = '$query_room' ") or die(mysql_error());
+    $raw_results = mysql_query("SELECT * FROM rooms WHERE RoomID = '$query_room' ") or die(mysql_error());
 
     ?>
 </div>
 <script>
-    function bla(){$('#prostorija').bPopup();}
+    function bla(){$('#rooms').bPopup();}
 </script>
 </body>
 </html>

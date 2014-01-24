@@ -1,7 +1,4 @@
-<?php 
-include 'indeks.php';
-
-?>
+<?php include_once '../includes/indeks.php'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,8 +35,9 @@ width: 215px;
 height: 20px;
 }
 </style>
- 
-<form action="Search_room.php" method="post">
+</head>
+<body> 
+<form action="Search.php" method="post">
 <div class="regrm">
 Select room:  <select name="room" class="textfields" id="room">
 
@@ -60,7 +58,7 @@ Select room:  <select name="room" class="textfields" id="room">
 
  
  <?php
-include ('indeks.php');
+include_once ('../includes/indeks.php');
 
 $query_room = $_POST['room'];
 

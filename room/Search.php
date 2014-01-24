@@ -1,15 +1,10 @@
 <style>
-
     .Table
     {
-
         border:none;
-
     }
-
     .Table th
     {
-
         background-color:red;
         padding: 5px 9px;
         font-family:Arial;
@@ -17,56 +12,53 @@
         margin-top:20px;
         border:none;
     }
-
     .Table td
     {
-
         padding: 0 9px;
         height: 30px;
         background-color:#ECF7F9;
         border:none;
-
     }
-
 </style>
 <?php
-include 'indeks.php';
+include_once '../includes/indeks.php';
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Insert title here</title>
-    <link type="text/css" href="navigacija.css" rel="stylesheet"/>
+    <title>Employee Monitor</title>
+    <link type="text/css" href="../assets/css/administration.css" rel="stylesheet"/>
 
 
 </head>
 <body>
 <div class="container">
     <div class="header">
-        <ul>
-            <li><a href="#">Users</a>
-                <ul>
-                    <li><a href="registracija.php">Register</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">User list</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Prostorije</a>
-                <ul>
-                    <li><a href="kreiranje_prostorije.php">Create new room</a></li>
-                </ul>
-                <ul>
-                    <li><a href="lista_prostorija.php">Room list</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+		<ul>
+			<li><a href="#">Employees</a>
+				<ul>
+					<li><a href="../employee/Registration.php">Register employee</a></li>
+				</ul>
+				<ul>
+					<li><a href="../employee/Search.php">Search employees</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Rooms</a>
+				<ul>
+					<li><a href="Add.php">Add new room</a></li>
+				</ul>
+				<ul>
+					<li><a href="Search.php">Room list</a></li>
+				</ul>
+			</li>
+            <li><a href="../includes/functions/logout.php">Log out</a></li>
+		</ul>
+	</div>
     <div class="prostorija">
 
-        <form action="Search_room.php" method="post">
+        <form action="Search.php" method="post">
             <div class="regrm">
                 Select room:  <select name="room" class="textfields" id="room">
 
@@ -85,7 +77,7 @@ include 'indeks.php';
         </form>
 
         <?php
-        include ('indeks.php');
+        include ('../includes/indeks.php');
 
         $query_room = $_POST['room'];
 
@@ -113,10 +105,8 @@ include 'indeks.php';
             //while($results = mysql_fetch_array($raw_results))
 
             {
-
                 {
                     //	echo "<form action='deleteZaposlenikById.php' method ='GET'>";
-
                     echo "<tr>";
                     echo "<td>" .htmlspecialchars($results['title'] ). "</td>";
                     echo "<td>" .htmlspecialchars($results['state']) . "</td>";
@@ -129,15 +119,10 @@ include 'indeks.php';
                     echo "</form>";
 
                     echo "</tr>";
-
                 }
-
             }
             echo "</table> ";
         }
-
-
-
         ?>
 
     </div>

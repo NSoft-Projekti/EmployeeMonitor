@@ -1,9 +1,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Employee Monitor</title>
 
-<link type="text/css" href="user_registration.css" rel="stylesheet"/>
+<link type="text/css" href="../assets/css/registration.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -12,28 +12,28 @@
 <div class="header">
     <ul>
 
-        <li><a href="update_zaposlenik.php">Personal information</a></li>
+        <li><a href="UpdateEmployee.php">Personal information</a></li>
         <li><a href="#pregled_vremena">Working time review</a></li>
-        <li><a href="logout.php">Log out</a></li>
+        <li><a href="../includes/functions/logout.php">Log out</a></li>
 
     </ul>
 </div>
 <?php
-include 'indeks.php';
+include '../includes/indeks.php';
 @session_start();
 $currentUsername=$_SESSION ['Username'];
-$query = "SELECT * FROM zaposlenici WHERE korisnicko_ime ='$currentUsername'";
+$query = "SELECT * FROM employees WHERE Username ='$currentUsername'";
 $result = mysql_query ( $query ) or die ( "Query Failed : " . mysql_error () );
 $row = mysql_fetch_array ( $result );
-$id=$row['zaposlenikID'];
-$userName= $row ['korisnicko_ime'];
-$password= $row ['lozinka'];
-$firstName= $row ['ime'];
-$lastName= $row ['prezime'];
-$email= $row ['email'];
-$address= $row ['adresa'];
+$id=$row['EmployeeID'];
+$userName= $row ['Username'];
+$password= $row ['Password'];
+$firstName= $row ['FirstName'];
+$lastName= $row ['LastName'];
+$email= $row ['Email'];
+$address= $row ['Address'];
 //$dateTime = date("Y-m-d");
-$dateTime = $row['datum_rodjenja'];
+$dateTime = $row['Birthday'];
 
 
 $pieces = explode("-", $dateTime); //posto je datum napisan u formatu "Y-m-d" funkcija explode dijeli string $dateTime na mjestima gdje se nalazi znak -
@@ -48,14 +48,13 @@ if($pos==0)
 
 
 
-$cityId = $row ['gradID'];
-$positionId = $row['radno_mjestoID'];
-$gender = $row['spol'];
-
+$cityId = $row ['CityID'];
+$positionId = $row['PositionID'];
+$gender = $row['Gender'];
 
 $i = 0;
 while ( $rows = mysql_fetch_array ( $result ) ) {
-	$roll [$i] = $rows ['zaposlenikID'];
+	$roll [$i] = $rows ['EmployeeID'];
 	$i ++;
 }
 $total_elmt = count ( $roll );
@@ -70,8 +69,8 @@ $total_elmt = count ( $roll );
 </div>
 <div class="reguser">
 <input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/><br />
-<img id="utick" src="tick.png" width="16" height="16"/>
-<img id="ucross" src="cross.png" width="16" height="16"/>
+<img id="utick" src="../assets/img/tick.png" width="16" height="16"/>
+<img id="ucross" src="../assets/img/cross.png" width="16" height="16"/>
 </div>
 
 <div class="password">
@@ -88,8 +87,8 @@ $total_elmt = count ( $roll );
 
 <div class="email">
 <input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/><br />
-<img id="etick" src="tick.png" width="16" height="16"/>
-<img id="ecross" src="cross.png" width="16" height="16"/>
+<img id="etick" src="../assets/img/tick.png" width="16" height="16"/>
+<img id="ecross" src="../assets/img/cross.png" width="16" height="16"/>
 </div>
 
 <div class="address">
@@ -150,13 +149,13 @@ for ($i=$curYear; $i>=1950; $i--) {
 Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
 <?php
-        $getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
+        $getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
         while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
-			if($viewAllRadnaMjesta['radno_mjestoID']==$positionId){
-				echo '<option value='.$viewAllRadnaMjesta['radno_mjestoID'].' selected>'.$viewAllRadnaMjesta['naziv']. '</option>';
+			if($viewAllRadnaMjesta['PositionID']==$positionId){
+				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' selected>'.$viewAllRadnaMjesta['naziv']. '</option>';
 			}
 			else{
-				echo '<option value='.$viewAllRadnaMjesta['radno_mjestoID'].' >'.$viewAllRadnaMjesta['naziv']. '</option>';
+				echo '<option value='.$viewAllRadnaMjesta['PositionID'].' >'.$viewAllRadnaMjesta['naziv']. '</option>';
 			}
 		}
 	
@@ -173,13 +172,13 @@ Grad:
 
 
 <?php
-        $getAllCities = mysql_query("SELECT * FROM gradovi;");
+        $getAllCities = mysql_query("SELECT * FROM cities;");
         while($viewAllCities=mysql_fetch_array($getAllCities)){
-			if($viewAllCities['gradID']==$cityId){
-				echo '<option value='.$viewAllCities['gradID'].' selected>'.$viewAllCities['naziv']. '</option>';
+			if($viewAllCities['CityID']==$cityId){
+				echo '<option value='.$viewAllCities['CityID'].' selected>'.$viewAllCities['Name']. '</option>';
 			}
 			else{
-				echo '<option value='.$viewAllCities['gradID'].' >'.$viewAllCities['naziv']. '</option>';
+				echo '<option value='.$viewAllCities['CityID'].' >'.$viewAllCities['Name']. '</option>';
 			}
 		}
 	
@@ -246,10 +245,10 @@ if (isset ( $_GET ['submit'] )) {
 	
 	
 	
-	$query2 = "UPDATE zaposlenici SET korisnicko_ime='$korisnicko_ime', lozinka='$lozinka' ,
-	ime='$ime', prezime='$prezime', email='$email', adresa='$adresa', radno_mjestoID='$radno_mjesto',
-	spol='$spol', gradID='$grad', datum_rodjenja='$datumrodjenja'
-	WHERE  zaposlenikID='$id' ";
+	$query2 = "UPDATE employees SET Username='$korisnicko_ime', Password='$lozinka' ,
+	FirstName='$ime', LastName='$prezime', Email='$email', Address='$adresa', PositionID='$radno_mjesto',
+	Gender='$spol', CityID='$grad', Birthday='$datumrodjenja'
+	WHERE  EmployeeID='$id' ";
 	
 	$result2 = mysql_query ( $query2 ) or die ( "Query Failed : " . mysql_error () );
 	
@@ -263,7 +262,7 @@ if (isset ( $_GET ['submit'] )) {
 	
 	}
 	
-	echo "<script type='text/javascript'>window.location.href='update_zaposlenik.php'</script>";
+	echo "<script type='text/javascript'>window.location.href='UpdateEmployee.php'</script>";
 	
 	
 	}

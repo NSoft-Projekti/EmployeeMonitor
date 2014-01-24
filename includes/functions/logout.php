@@ -1,6 +1,6 @@
 <?php
 
-include 'indeks.php';
+include '../indeks.php';
 
 
 session_start();
@@ -13,7 +13,7 @@ if(!isset($_REQUEST['logmeout'])){
 	if(!session_is_registered('first_name')){
 		echo "<center><font color=red><strong>You are now logged out!</strong></font></center><br />";
 		
-		include 'prva_stranica.php';
+		include '../../Home.php';
 	}
 }
 ?>

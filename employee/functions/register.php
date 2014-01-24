@@ -1,5 +1,5 @@
 <?php
-include ('indeks.php');
+include ('../../includes/indeks.php');
 
 if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['password']==$_POST['confirm_password']))
 {
@@ -18,11 +18,11 @@ if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['pass
     
     $spol = $_POST['sex'];
     $grad = $_POST['grad'];
-    $gradId = mysql_query("SELECT gradID from gradovi where naziv = '".$grad."'");
+    $gradId = mysql_query("SELECT CityID from cities where Name  = '".$grad."'");
     $rmjesto = $_POST['radno_mjesto'];
     $datumreg = date("Y/m/d");
     
-    $checkusername = mysql_query("SELECT * FROM zaposlenici WHERE korisnicko_ime = '".$username."'");
+    $checkusername = mysql_query("SELECT * FROM employees WHERE Username  = '".$username."'");
     
     if(mysql_num_rows($checkusername) == 1)
     {
@@ -32,14 +32,15 @@ if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['pass
     else
 
      {
-            $registerquery = mysql_query("INSERT INTO zaposlenici (korisnicko_ime,lozinka,ime,prezime,adresa,datum_rodjenja,spol,email,datum_registracije,administrator,gradID,radno_mjestoID)  
-            VALUES('$username', '$password',  '$name', '$surname', '$address', '$datumrodjenja', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto' )");
+            $registerquery = mysql_query("INSERT INTO `employees` (`Username`, `Password`, `FirstName`, `LastName`, `Address`, `Birthday`, `Gender`, `Email`, `RegistrationDate`, `Administrator`, `CityID`, `PositionID`, `Image`)  
+            VALUES('$username', '$password',  '$name', '$surname', '$address', '$datumrodjenja', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto', 'null' )") or die(mysql_mysql_error());
             
         
         if($registerquery)
         {
+        	header("Location: /EmployeeMonitor/admin/Administration.php");
             echo "<h1>Uspjeh</h1>";
-            echo "<p>Uspješno ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
+            //echo "<p>Uspješno ste se regitrirali. Klik <a href=\"login.php\">ovdje za login</a>.</p>";
         }
         else
         {

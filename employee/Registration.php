@@ -89,27 +89,25 @@ if(response == 1){
 <form onSubmit="return validate()" action="functions/register.php" method="POST">
 <div class="container">
 <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right" >
-<div class="header">
-<ul>
-			<li><a href="#">Users</a>
+			<div class="header">
 				<ul>
-					<li><a href="user_registration.php">Register user</a></li>
+					<li><a href="#">Employees</a>
+						<ul>
+							<li><a href="Registration.php">Register employee</a></li>
+						</ul>
+						<ul>
+							<li><a href="Search.php">Search employees</a></li>
+						</ul></li>
+					<li><a href="#">Rooms</a>
+						<ul>
+							<li><a href="../room/Add.php">Add new room</a></li>
+						</ul>
+						<ul>
+							<li><a href="../room/Search.php">Room list</a></li>
+						</ul></li>
+					<li><a href="../includes/functions/logout.php">Log out</a></li>
 				</ul>
-				<ul>
-					<li><a href="#">User list</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Rooms</a>
-				<ul>
-					<li><a href="kreiranje_prostorije.php">Add new room</a></li>
-				</ul>
-				<ul>
-					<li><a href="lista_prostorija.php">Room list</a></li>
-				</ul>
-			</li>
-            <li><a href="logout.php">Log out</a></li>
-		</ul>
-</div>
+			</div>
 <div class="registration">
 <div class="headline">
 <h1>User registration</h1>
@@ -185,10 +183,10 @@ for ($i=$curYear; $i>=1950; $i--) {
 <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 <option id="0">Work position</option>
 <?php
-        $getAllRadnaMjesta = mysql_query("SELECT * FROM radna_mjesta;");
+        $getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
         while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
 ?>
-<option value="<?php echo $viewAllRadnaMjesta['radno_mjestoID']?>"><?php echo $viewAllRadnaMjesta['naziv'] ?></option>
+<option value="<?php echo $viewAllRadnaMjesta['PositionID']?>"><?php echo $viewAllRadnaMjesta['Name'] ?></option>
 <?php } ?>
 </select>
 </div>
@@ -197,10 +195,10 @@ for ($i=$curYear; $i>=1950; $i--) {
 <select name="grad" class="textfields" id="grad">
 <option id="0">Town</option>
 <?php
-        $getAllCities = mysql_query("SELECT * FROM gradovi;");
+        $getAllCities = mysql_query("SELECT * FROM cities;");
         while($viewAllCities=mysql_fetch_array($getAllCities)){
 ?>
-<option value="<?php echo $viewAllCities['gradID']?>"><?php echo $viewAllCities['naziv'] ?></option>
+<option value="<?php echo $viewAllCities['CityID']?>"><?php echo $viewAllCities['Name'] ?></option>
 <?php } ?>
 </select>
 </div>

@@ -46,7 +46,7 @@ Select room:  <select name="room" class="textfields" id="room">
 <?php 
 	$getAllRooms = mysql_query("SELECT * FROM rooms;");
 	while($viewAllRooms=mysql_fetch_array($getAllRooms)){
-	echo "<option value=".$viewAllRooms['roomID'].">".$viewAllRooms['title']."</option>";
+	echo "<option value=".$viewAllRooms['RoomID'].">".$viewAllRooms['Name']."</option>";
    }
 ?>
 
@@ -71,7 +71,7 @@ $query_room = $_POST['room'];
     
     if(empty($query_room)==false)
     {
-    	$query=("SELECT * FROM rooms WHERE roomID = '$query_room' ");
+    	$query=("SELECT * FROM rooms WHERE RoomID = '$query_room' ");
     }
      else
     {
@@ -86,9 +86,8 @@ $query_room = $_POST['room'];
 		echo "<table class='Table' border='1px'>";
 		
 		echo "<tr bgcolor='#CAEDF7'>";
-		echo "<td>" . "Title" . "</td>";
-		echo "<td>" . "State" . "</td>";
-		echo "<td>" . "Limitation" . "</td>";
+		echo "<td>" . "Name" . "</td>";
+		echo "<td>" . "Limit" . "</td>";
 		echo "<td>" . "Description" . "</td>";
 		echo "</tr>";
 		
@@ -97,17 +96,21 @@ $query_room = $_POST['room'];
 		{
 		
 			{
-				  		echo "<form action='DeleteRoom.php' method ='GET'>";
+				  		echo "<form action='functions/DeleteRoom.php' method ='GET'>";
 				  		
 		 		echo "<tr>";
-		 		echo "<td>" .htmlspecialchars($results['title'] ). "</td>";
-		 		echo "<td>" .htmlspecialchars($results['state']) . "</td>";
-		 		echo "<td>" .htmlspecialchars($results['limitation'] ). "</td>";
-		 		echo "<td>" .htmlspecialchars($results['description'] ). "</td>";
+		 		echo "<td>" .htmlspecialchars($results['Name'] ). "</td>";
+		 		echo "<td>" .htmlspecialchars($results['Limit'] ). "</td>";
+		 		echo "<td>" .htmlspecialchars($results['Description'] ). "</td>";
 		 		
 		 		
-		echo "<input type='hidden' name='r_id' value=".$results['roomID'].">";
+		echo "<input type='hidden' name='r_id' value=".$results['RoomID'].">";
 		echo "<td> <input type='submit' value='Delete'/></td>"; 
+		 echo "</form>";
+		 
+		 echo "<form action='Update.php' method='GET'>";
+		 echo "<input type='hidden' name='r_id' value=".$results['RoomID'].">";
+		 echo "<td> <input type='submit' value='Update'/></td>";
 		 echo "</form>";
 		 		
 		 		echo "</tr>";

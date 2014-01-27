@@ -67,9 +67,9 @@
 
 <form action="" method="post">
 <div class="regrm">
-Select room:  <select name="room" class="textfields" id="room">
+<select name="room" class="textfields" id="room">
 
-<option id="0">--Select--</option>
+<option id="0">Select room:</option>
  
 <?php 
         $getAllRooms = mysql_query("SELECT * FROM rooms;");

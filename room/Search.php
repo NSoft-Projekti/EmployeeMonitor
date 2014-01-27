@@ -57,7 +57,7 @@
                             <li><a href="Add.php">Add new room</a></li>
                         </ul>
                         <ul>
-                            <li><a href="Search1.php">Room list</a></li>
+                            <li><a href="Search.php">Room list</a></li>
                         </ul>
                     </li>
                     <li><a href="../includes/functions/logout.php">Log out</a></li>
@@ -79,7 +79,7 @@
 ?>
 
 </select>
-<input type="submit" name="Search_rm" />
+<input type="submit" name="Search_rm" value="Send"/>
 </div>
 </form> 
 

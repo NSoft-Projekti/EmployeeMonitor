@@ -3,7 +3,9 @@
 <meta charset="utf-8">
 <title>Employee Monitor</title>
 
-<link type="text/css" href="../assets/css/registration.css" rel="stylesheet"/>
+
+<link type="text/css" href="../assets/css/UpdateEmployee.css" rel="stylesheet"/>
+<link type="text/css" href="../assets/css/administration.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -61,94 +63,81 @@ $total_elmt = count ( $roll );
 ?>
 <form method="get" action="">
 
-<div class="registration">
+<div class="update">
+
 
 <div class="headline">
-<h1>User information</h1>
-
-</div>
-<div class="reguser">
-<input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/><br />
-<img id="utick" src="../assets/img/tick.png" width="16" height="16"/>
-<img id="ucross" src="../assets/img/cross.png" width="16" height="16"/>
+	<h1>User information</h1>
 </div>
 
-<div class="password">
-<input type="text" name="password" value="<?php echo htmlentities($password); ?>"/><br />
+<div class="user">Username
+	<input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/><br />
+	
 </div>
-
-<div class="name">
-<input type="text" name="name" value="<?php echo htmlentities($firstName); ?>" /><br />
+<div class="pass">Password
+	<input type="text" id="password" name="password" value="<?php echo htmlentities($password); ?>"/><br />
 </div>
-
-<div class="surname">
-<input type="text" name="surname" value="<?php echo htmlentities($lastName); ?>"/><br />
+<div class="name">Name
+	<input type="text" id="name" name="name" value="<?php echo htmlentities($firstName); ?>" /><br />
 </div>
-
-<div class="email">
-<input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/><br />
-<img id="etick" src="../assets/img/tick.png" width="16" height="16"/>
-<img id="ecross" src="../assets/img/cross.png" width="16" height="16"/>
+<div class="lastname">Last name
+	<input type="text" id="surname" name="surname" value="<?php echo htmlentities($lastName); ?>"/><br />
 </div>
-
-<div class="address">
-<input type="text" name="address" value="<?php echo htmlentities($address); ?>"/><br />
+<div class="email">E-mail
+	<input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/><br />
+	
 </div>
-
-<div class="birth">
-Birthday:
+<div class="address">Adress
+	<input type="text" id="adress" name="address" value="<?php echo htmlentities($address); ?>"/><br />
+</div>
+<div class="birth">Date of birth
 </div>
 <div class="dmg">
-<select name="dan" id="dan" style="width:70px;">
-<option value="dan">Dan:</option>
-<?php
-for ($i=1; $i<=31; $i++) {
-	if($i==$day){
-		echo '<option value="'.$i.'" selected>'.$i.'</option>';
+	<select name="dan" id="dan" >
+	<option value="dan">Day</option>
+	<?php
+		for ($i=1; $i<=31; $i++) {
+		if($i==$day){
+			echo '<option value="'.$i.'" selected>'.$i.'</option>';
+					}
+		else{
+			echo '<option value="'.$i.'">'.$i.'</option>';
+			}
+		}
+	?>
+</select>
+<select name="mjesec" id="mjesec" >
+	<option value="mjesec">Month</option>
+	<?php
+	for ($i=1; $i<=12; $i++) {
+		if($i==$month){
+			echo '<option value="'.$i.'" selected>'.$i.'</option>';
+			}
+	else{
+			echo '<option value="'.$i.'">'.$i.'</option>';
+		}
 	}
+	?>
+</select>
+<select name="godina" id="godina" >
+	<option value="godina">Year</option>
+	<?php
+	$curYear = date('Y');
+	for ($i=$curYear; $i>=1950; $i--) {
+		if($i==$year){
+			echo '<option value="'.$i.'" selected>'.$i.'</option>';
+		}
 	else{
 		echo '<option value="'.$i.'">'.$i.'</option>';
+		}
 	}
-}
-?>
+	?>
 </select>
-
-<select name="mjesec" id="mjesec" style="width:70px;">
-<option value="mjesec">Mjesec:</option>
-<?php
-for ($i=1; $i<=12; $i++) {
-	if($i==$month){
-		echo '<option value="'.$i.'" selected>'.$i.'</option>';
-	}
-	else{
-		echo '<option value="'.$i.'">'.$i.'</option>';
-	}
-}
-?>
-</select>
-
-
-<select name="godina" id="godina" style="width:70px;">
-<option value="godina">Godina:r</option>
-<?php
-$curYear = date('Y');
-for ($i=$curYear; $i>=1950; $i--) {
-	if($i==$year){
-		echo '<option value="'.$i.'" selected>'.$i.'</option>';
-	}
-	else{
-		echo '<option value="'.$i.'">'.$i.'</option>';
-	}
-}
-?>
-</select>
-
-
 </div>
 <div class="regrm">
-Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
+	Radno mjesto <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
-<?php
+	<?php
         $getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
         while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
 			if($viewAllRadnaMjesta['PositionID']==$positionId){
@@ -159,19 +148,12 @@ Radno mjesto: <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 			}
 		}
 	
-?> 
+	?> 
 </select>
 </div>
-
-
-<div class="reggrad">
-Grad: 
+<div class="reggrad">Grad
  <select name="grad" class="textfields" id="grad">
-
-
-
-
-<?php
+	<?php
         $getAllCities = mysql_query("SELECT * FROM cities;");
         while($viewAllCities=mysql_fetch_array($getAllCities)){
 			if($viewAllCities['CityID']==$cityId){
@@ -180,45 +162,40 @@ Grad:
 			else{
 				echo '<option value='.$viewAllCities['CityID'].' >'.$viewAllCities['Name']. '</option>';
 			}
-		}
-	
-?> 
-</select>
-
-
+		}	
+	?> 
+	</select>
 </div>
 <div class="spol">
-<?php
-if($gender=="male"){ 
-	echo 'Male';
-	echo '<input type="radio" name="sex" value='.$gender.' checked>';
-	}
-else{
-	echo 'Male';
-	echo '<input type="radio" name="sex" value="male">';
-	}
+	<?php
+	if($gender=="male"){ 
+		echo 'Male';
+		echo '<input type="radio" name="sex" value='.$gender.' checked>';
+		}
+	else{
+		echo 'Male';
+		echo '<input type="radio" name="sex" value="male">';
+		}
 
-if($gender=="female"){
-	echo 'Female';
-	echo '<input type="radio" name="sex" value='.$gender.' checked>';
-	}
-else{
-	echo 'Female';
-	echo '<input type="radio" name="sex" value="female">';
-	}
+	if($gender=="female"){
+		echo 'Female';
+		echo '<input type="radio" name="sex" value='.$gender.' checked>';
+		}
+	else{
+		echo 'Female';
+		echo '<input type="radio" name="sex" value="female">';
+		}
 
-?>
-
+	?>
+</div>
+<div class="button">
+	<input name="submit" type="submit" value="Update" /><br /> 
+	<input name="reset" type="reset" value="Reset" />
 </div>
 
-
-<div>
-<input name="submit" type="submit" value="Update" /><br /> 
-<input name="reset" type="reset" value="Reset" />
-</div>
 	
-	</div>
-	</form>
+</div>
+</form>
 </div>		
 
 <?php
@@ -271,6 +248,5 @@ if (isset ( $_GET ['submit'] )) {
 ?>
 
 </body>
-
 </html>
 

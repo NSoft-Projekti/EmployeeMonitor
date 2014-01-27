@@ -20,13 +20,10 @@
 					<input type="password" name="password" placeholder="Password"/>
 		</div>
 		<div class="login">
-			<input type="submit" name="submit" value="Log in">
+			<a href="navigacija.html"><input type="submit" name="submit" value="Log in"></a> 
 		</div>
-		<div class="forgot">
-		<a href="forgot_pass.php">Forgot your password?</a>
-		</div>
+		
 	</form>
-
 	
 	</div>
 	

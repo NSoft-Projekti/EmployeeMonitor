@@ -1,0 +1,142 @@
+@CHARSET "ISO-8859-1";
+.container{
+width:1024px;
+height:850px;
+margin:auto;
+background:url('../img/pozadina.jpg');
+background-repeat:no-repeat;
+}
+.update{
+height:850px;
+width:280px;
+float:left;
+margin-top:60px;
+
+font-size:16px;
+}	
+
+#username{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#password{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#name{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#surname{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#email{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#adress{
+height:35px;
+float:right;
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:5px;
+padding:5px;
+}
+#dan{
+		height:23px;
+	width:80px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#F0F4FD;
+	color:#999;
+	margin-bottom:5px;
+}
+#mjesec{
+		height:23px;
+	width:80px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#F0F4FD;
+	color:#999;
+	
+}
+#godina{
+		height:23px;
+	width:80px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#F0F4FD;
+	color:#999;
+	}
+#radno_mjesto{
+	height:25px;
+	width:80px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#F0F4FD;
+	color:#999;
+	margin-bottom:5px;
+}
+#grad{
+	height:25px;
+	width:80px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#F0F4FD;
+	color:#999;
+	margin-bottom:5px;
+}
+.button input{
+	height:23px;
+	width:60px;
+	border:1px solid #bdc7d8;
+	border-radius:5px;
+	background-color:#B2CAF4;
+	
+	margin-bottom:5px;
+}

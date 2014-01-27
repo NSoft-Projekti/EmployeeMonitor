@@ -19,25 +19,27 @@ float:right;
 margin-left:40px;
 }
 .name input{
-width:164px;
+width:165px;
 height:35px;
 border-radius:5px;
 border:1px solid #bdc7d8;
-font-size:18px;
+font-size:16px;
 margin-top:10px;
 margin-left:40px;
 margin-bottom:10px;
-background-color:#F8F8F8;
+background-color:#F0F4FD;
+padding-left:8px;
 }
 .password input{
-width:164px;
+width:165px;
 height:35px;
 border-radius:5px;
 border:1px solid #bdc7d8;
-font-size:18px;
+font-size:16px;
 margin-bottom:50px;
 margin-left:40px;
-background-color:#F8F8F8;
+background-color:#F0F4FD;
+padding-left:8px;
 }
 .login input{
 width:60px;
@@ -45,17 +47,9 @@ height:27px;
 border-radius:5px;
 border:1px solid #bdc7d8;
 font-size:12px;
-background-color:#F8F8F8;
+background-color:#F0F4FD;
 margin-left:40px;
 margin-bottom:30px;
 font-weight:bold;
 float:left;
-}
-.forgot{
-float:left;
-margin-left:40px;}
-
-.prostorija_body{
-    background-color:#CBD9DB;
-    font-family:cambri;
 }

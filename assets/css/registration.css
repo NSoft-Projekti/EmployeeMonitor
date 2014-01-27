@@ -4,10 +4,9 @@ font-family:calibri;
 }
 .header{
 width:1024px;
-height:29px;
-background:#CBD9DB;
+height:30px;
+background:#B2CAF4;
 }
-
 ul
 {
 list-style-type:none;
@@ -15,11 +14,13 @@ margin:0;
 padding:0;
 overflow:hidden;
 font-size:18px;
+
 }
 li
 {
 float:left;
 list-style-type:none;
+
 }
 a:link,a:visited
 {
@@ -27,14 +28,14 @@ display:block;
 width:230px;
 font-weight:bold;
 color:black;
-background-color:#CBD9DB;
+background:#B2CAF4;
 text-align:center;
 padding:4px;
 text-decoration:none;
 }
 a:hover,a:active
 {
-background-color:#2DB4C9;
+background-color:#74A0EF;
 }
  ul ul {
 	display: none;
@@ -50,15 +51,17 @@ ul li {
 
 .container{
 width:1024px;
-height:800px;
+height:850px;
 margin:auto;
 background:url('../img/pozadina.jpg');
 background-repeat:no-repeat;
 }
+
+
 .registration{
 height:690px;
 width:280px;
-background:white;
+
 float:left;
 margin-left:150px;
 margin-top:60px;	
@@ -71,7 +74,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
-
+background-color:#F0F4FD;
 }
 .name input{
 width:200px;
@@ -82,8 +85,9 @@ padding:8px 10px;
 font-size:15px;
 margin-right:10px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
-.surname input{
+.lastname input{
 width:200px;
 height:20px;
 border-radius:5px;
@@ -91,6 +95,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
 .address input{
 width:200px;
@@ -100,6 +105,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
 .email input{
 width:200px;
@@ -109,6 +115,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
 .birth{
 height:20px;
@@ -116,9 +123,10 @@ width:200;
 color:black;
 font-size:15px;
 font-weight:normal;
-margin-bottom:15px;
+margin-bottom:5px;
 margin-top:3px;
 overflow:auto;
+
 }
 .password input{
 width:200px;
@@ -128,6 +136,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
 .password_again input{
 width:200px;
@@ -137,6 +146,7 @@ border:1px solid #bdc7d8;
 padding:8px 10px;
 font-size:15px;
 margin-bottom:10px;
+background-color:#F0F4FD;
 }
 .regrm input{
 width:200px;
@@ -150,7 +160,7 @@ margin-bottom:20px;
 }
 .reggrad input{
 height:20px;
-width:200;
+width:200px;
 color:black;
 font-size:15px;
 font-weight:normal;
@@ -163,25 +173,56 @@ width:300px;
 margin-bottom:10px; 
 }
 #dan{
-font-size:13px;
+font-size:12px;
 padding:5px;
 height:30px;
-margin:2px 0 0 0;
+width:70px;
 border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:12px;
+background-color:#F0F4FD;
+color:#999;
 }
 #mjesec{
-font-size:13px;
+font-size:12px;
 padding:5px;
 height:30px;
-margin:2px 0 0 0;
+width:70px;
 border:1px solid #bdc7d8;
+border-radius:5px;
+background-color:#F0F4FD;
+color:#999;
 }
 #godina{
 font-size:13px;
 padding:5px;
 height:30px;
-margin:2px 0 0 0;
+width:70px;
 border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:12px;
+background-color:#F0F4FD;
+color:#999;
+}
+#radno_mjesto{
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+margin-bottom:10px;
+padding:5px;
+}
+#grad{
+border:1px solid #bdc7d8;
+border-radius:5px;
+font-size:13px;
+background-color:#F0F4FD;
+color:#999;
+height:30px;	
+width:70px;
+padding:5px;
 }
 .spol
 {
@@ -192,19 +233,19 @@ float:left;
 width:200px;
 height:20px;
 margin:13px 0 10px 0;
+
 }
 .registrirajse input{
-width:100px;
-height:30px;
-background-color:#F8F8F8;
+width:90px;
+height:27px;
+background-color:#B2CAF6;
 border:1px solid #bdc7d8;
 border-radius:5px;
 margin-top:5px;
 margin-bottom:20px;
 font-weight:bold;
-font-size:14px;
+font-size:13px;
 color:black;
-padding:7px 20px;
 text-align:center;
 cursor:pointer;
 }

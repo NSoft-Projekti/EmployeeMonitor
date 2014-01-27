@@ -1,261 +1,236 @@
 @CHARSET "ISO-8859-1";
 body{
-font-family:calibri;
+    font-family:calibri;
 }
 .header{
-width:1024px;
-height:30px;
-background:#B2CAF4;
+    width:1024px;
+    height:29px;
+    height:32px;
+    background:#B2CAF4;
 }
 
 ul
 {
-list-style-type:none;
-margin:0;
-padding:0;
-overflow:hidden;
-font-size:18px;
-
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-size:18px;
 }
 li
 {
-float:left;
-list-style-type:none;
+    float:left;
+    list-style-type:none;
 
 }
 a:link,a:visited
 {
-display:block;
-width:230px;
-font-weight:bold;
-color:black;
-background:#B2CAF4;
-text-align:center;
-padding:4px;
-text-decoration:none;
+    display:block;
+    width:230px;
+    font-weight:bold;
+    color:black;
+    background:#B2CAF4;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
 }
 a:hover,a:active
 {
-background-color:#74A0EF;
+    background-color:#74A0EF;
 }
- ul ul {
-	display: none;
+ul ul {
+    display: none;
 }
 
 ul li:hover > ul {
-		display: block;
-	}
-text-transform: lowercase;	
+    display: block;
+}
+text-transform: lowercase;
 ul li {
-	float: left;
-	}
+    float: left;
+}
 
 .container{
-width:1024px;
-height:850px;
-margin:auto;
-background:url('../img/pozadina.jpg');
-background-repeat:no-repeat;
+    width:1024px;
+    height:800px;
+    margin:auto;
+    background:url('pozadina.jpg');
+    background-repeat:no-repeat;
 }
-
 
 .registration{
-height:690px;
-width:280px;
-background:white;
-float:left;
-margin-left:150px;
-margin-top:60px;	
+    height:690px;
+    width:280px;
+    background:white;
+    float:left;
+    margin-left:150px;
+    margin-top:60px;
 }
 .reguser input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
-}
-.name input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-right:10px;
-margin-bottom:10px;
-background-color:#F0F4FD;
-}
-.lastname input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
-}
-.address input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
-}
-.email input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
-}
-.birth{
-height:20px;
-width:200;
-color:black;
-font-size:15px;
-font-weight:normal;
-margin-bottom:5px;
-margin-top:3px;
-overflow:auto;
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
 
 }
+.name input{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+.surname input{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.address input{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.email input{
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
+}
+.birth{
+    height:20px;
+    width:200;
+    color:black;
+    font-size:15px;
+    font-weight:normal;
+    margin-bottom:15px;
+    margin-top:3px;
+    overflow:auto;
+}
 .password input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
 }
 .password_again input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-font-size:15px;
-margin-bottom:10px;
-background-color:#F0F4FD;
+    width:200px;
+    height:20px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    padding:8px 10px;
+    font-size:15px;
+    margin-bottom:10px;
 }
 .regrm input{
-width:200px;
-height:20px;
-border-radius:5px;
-border:1px solid #bdc7d8;
-padding:8px 10px;
-margin-top:15px;
-font-size:15px;
-margin-bottom:20px;
+    width:60px;
+    height:25px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    margin-top:55px;
+    margin-bottom:20px;
+    background-color:#B2CAF4;
+    font-weight:bold;
+    text-align:center;
+    margin-left:20px;
+}
+
+#room{
+    width:133px;
+    height:28px;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    color:black;
+    background-color:#F0F4FD;
+    padding: 0 0 0 8px;
 }
 .reggrad input{
-height:20px;
-width:200px;
-color:black;
-font-size:15px;
-font-weight:normal;
-margin-bottom:15px;
-margin-top:25px;
+    height:20px;
+    width:200;
+    color:black;
+    font-size:15px;
+    font-weight:normal;
+    margin-bottom:15px;
+    margin-top:25px;
 }
 .dmg
 {
-width:300px;
-margin-bottom:10px; 
+    width:300px;
+    margin-bottom:10px;
 }
 #dan{
-font-size:12px;
-padding:5px;
-height:30px;
-width:70px;
-border:1px solid #bdc7d8;
-border-radius:5px;
-font-size:12px;
-background-color:#F0F4FD;
-color:#999;
+    font-size:13px;
+    padding:5px;
+    height:30px;
+    margin:2px 0 0 0;
+    border:1px solid #bdc7d8;
 }
 #mjesec{
-font-size:12px;
-padding:5px;
-height:30px;
-width:70px;
-border:1px solid #bdc7d8;
-border-radius:5px;
-background-color:#F0F4FD;
-color:#999;
+    font-size:13px;
+    padding:5px;
+    height:30px;
+    margin:2px 0 0 0;
+    border:1px solid #bdc7d8;
 }
 #godina{
-font-size:13px;
-padding:5px;
-height:30px;
-width:70px;
-border:1px solid #bdc7d8;
-border-radius:5px;
-font-size:12px;
-background-color:#F0F4FD;
-color:#999;
-}
-#radno_mjesto{
-border:1px solid #bdc7d8;
-border-radius:5px;
-font-size:13px;
-background-color:#F0F4FD;
-color:#999;
-height:30px;	
-margin-bottom:10px;
-padding:5px;
-}
-#grad{
-border:1px solid #bdc7d8;
-border-radius:5px;
-font-size:13px;
-background-color:#F0F4FD;
-color:#999;
-height:30px;	
-width:70px;
-padding:5px;
+    font-size:13px;
+    padding:5px;
+    height:30px;
+    margin:2px 0 0 0;
+    border:1px solid #bdc7d8;
 }
 .spol
 {
-font-weight:bold;
-color:black;
-font-size:15px;
-float:left;
-width:200px;
-height:20px;
-margin:13px 0 10px 0;
-
+    font-weight:bold;
+    color:black;
+    font-size:15px;
+    float:left;
+    width:200px;
+    height:20px;
+    margin:13px 0 10px 0;
 }
 .registrirajse input{
-width:90px;
-height:27px;
-background-color:#B2CAF6;
-border:1px solid #bdc7d8;
-border-radius:5px;
-margin-top:5px;
-margin-bottom:20px;
-font-weight:bold;
-font-size:13px;
-color:black;
-text-align:center;
-cursor:pointer;
+    width:100px;
+    height:30px;
+    background-color:#CBD9DB;
+    border:1px solid #bdc7d8;
+    border-radius:5px;
+    margin-top:5px;
+    margin-bottom:20px;
+    font-weight:bold;
+    font-size:14px;
+    color:black;
+    padding:7px 20px;
+    text-align:center;
+    cursor:pointer;
 }
 
 .headline h1{
-font-size:25px;	
-margin-bottom:15px;
-color:#333;
+    font-size:25px;
+    margin-bottom:15px;
+    color:#333;
 }
+
+
 
 #utick{display:none}
 #ucross{display:none}

@@ -1,63 +1,119 @@
 @CHARSET "ISO-8859-1";
 body{
-font-family:calibri;
+    font-family:calibri;
 
 }
 .container{
-width:1024px;
-height:800px;
-margin:auto;
+    width:1024px;
+    height:800px;
+    margin:auto;
+
+
 }
 .header{
-width:1024px;
-height:30px;
-background:#B2CAF4;
-
+    width:1024px;
+    height:30px;
+    background:#B2CAF4;
 }
 
 .registration{
-background:url('../img/naslovna.jpg');
-width:800px;
-height:590px;
+    background:url('naslovna.jpg');
+    width:800px;
+    height:590px;
+
 }
+
+.img{
+    background:url('pozadina.jpg');
+    width:800px;
+    height:590px;
+}
+#radno_mjesto{
+    width:150px;
+    height:30px;
+    color:#999;
+    background-color:#F0F4FD;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:13px;
+    padding:5px;
+
+}
+.submit input {
+    width:150px;
+    height:30px;
+    color:#999;
+    background-color:#F0F4FD;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:13px;
+    padding:8px;
+    margin-top:70px;
+    margin-bottom:10px;
+
+
+}
+.send input{
+    width:60px;
+    height:27px;
+    color:black;
+    background-color:#B2CAF6;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:13px;
+    padding:5px;
+    margin-top:30px;
+
+}
+.regrm input {
+    width:150px;
+    height:30px;
+    color:#999;
+    background-color:#F0F4FD;
+    border-radius:5px;
+    border:1px solid #bdc7d8;
+    font-size:13px;
+    padding:8px;
+    margin-bottom:10px;
+}
+
 ul
 {
-list-style-type:none;
-margin:0;
-padding:0;
-overflow:hidden;
-font-size:18px;
-
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-size:18px;
 }
 li
 {
-float:left;
-list-style-type:none;
+    float:left;
+    list-style-type:none;
 
 }
 a:link,a:visited
 {
-display:block;
-width:230px;
-font-weight:bold;
-color:black;
-background:#B2CAF4;
-text-align:center;
-padding:4px;
-text-decoration:none;
+    display:block;
+    width:230px;
+    font-weight:bold;
+    color:black;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+    background:#B2CAF4;
 }
 a:hover,a:active
 {
-background-color:#74A0EF;
+    background-color:#74A0EF;
 }
- ul ul {
-	display: none;
+ul ul {
+    display: none;
 }
 
 ul li:hover > ul {
-		display: block;
-	}
-text-transform: lowercase;	
+    display: block;
+}
+text-transform: lowercase;
 ul li {
-	float: left;
-	}
+    float: left;
+}

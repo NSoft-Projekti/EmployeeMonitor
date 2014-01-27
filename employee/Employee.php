@@ -12,47 +12,6 @@ include '../includes/indeks.php';
 <link type="text/css" href="../assets/css/employee.css" rel="stylesheet"/>
 
 <style>
-ul
-{
-list-style-type:none;
-margin:0;
-padding:0;
-overflow:hidden;
-font-size:18px;
-}
-li
-{
-float:left;
-}
-a:link,a:visited
-{
-    display:block;
-    width:230px;
-    font-weight:bold;
-    color:black;
-    background-color:#CBD9DB;
-    text-align:center;
-    padding:4px;
-    text-decoration:none;
-}
-#prostorija{
-    display: none;
-}
-a:hover,a:active
-{
-    background-color:#2DB4C9;
-}
-ul ul {
-    display: none;
-}
-
-ul li:hover > ul {
-    display: block;
-}
-text-transform: lowercase;
-ul li {
-    float: left;
-}
 
 </style>
 </head>
@@ -62,7 +21,7 @@ ul li {
 		
 <ul>
 
-<li><a href="../includes/functions/UpdateEmployee.php">Personal information</a></li>
+<li><a href="UpdateEmployee.php">Personal information</a></li>
 <li><a href="#pregled_vremena">Working time review</a></li>
 <li><a href="../includes/functions/logout.php">Log out</a></li>
 
@@ -71,12 +30,12 @@ ul li {
 	</div>
 	<div class="registracija">
 	</div>
-</div>
+
 
 <div id="rooms" class="rooms">
     <h1>Please, choose room!</h1>
 
-    <form action="../room/Search.php" method="post">
+    <form action="Employee.php" method="post">
         <div class="regrm">
 
             Select room:  <select name="room" class="textfields" id="room">
@@ -109,5 +68,6 @@ ul li {
 <script>
     function bla(){$('#rooms').bPopup();}
 </script>
+ </div>
 </body>
 </html>

@@ -21,16 +21,22 @@ if(!empty($_POST['name'])  and !empty($_POST['limitation']) and !empty($_POST['d
     	
            
         
-    	if($qAddRoom)
-    	{
-    		echo "<h1>Uspjeh</h1>";
-    		echo "<p>Uspjesno ste se dodali prostoriju u bazu.</p>";
-    	}
-    	else
-    	{
-    		echo "<h1>Greska</h1>";
-    		echo "<p>Prostoriju nije moguce dodati u bazu.</p>";
-    	}
+    	
+if ($qAddRoom){
+
+		echo "<script type='text/javascript'>alert('Successfully updated!');</script>";
+	
+	}
+	else{
+		echo "<script type='text/javascript'>alert('Error!');</script>";
+	
+	}
+	
+	echo "<script type='text/javascript'>window.location.href='../Add.php'</script>";
+	
+	
+	
+
     }
 }
 else {

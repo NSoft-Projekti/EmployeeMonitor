@@ -57,9 +57,10 @@
         <textarea id="description" name="description" rows=4 cols=25 wrap=physical placeholder="Description"></textarea>
 
         <div class="registrirajse">
-            <form action="#"> <input type="submit" id="button2" name="button2" value="Add"></form>
+            <input type="submit" id="button2" name="button2" value="Add">
         </div>
     </div>
 </form>
+
 </body>
 </html>

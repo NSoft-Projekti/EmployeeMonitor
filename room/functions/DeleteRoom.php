@@ -3,7 +3,7 @@ include_once '../../includes/indeks.php';
 
 $room_id=$_GET['r_id'];
 
-$sql="DELETE FROM rooms WHERE roomID='$room_id'";
+$sql="DELETE FROM rooms WHERE RoomID='$room_id'";
 $result=mysql_query($sql);
 
 if ($result)

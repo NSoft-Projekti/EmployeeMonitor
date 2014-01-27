@@ -66,7 +66,7 @@
     <div class="naslov">
         <h1>Update room</h1>
     </div>
-    <div class="naziv">
+    <div class="naziv">Name:<br/>
         <input type="text" id="name" name="name" value="<?php echo htmlentities($name); ?>"/>
     </div>
     <div class="limit">
@@ -87,9 +87,10 @@
 			?>     
         </select>
     </div>
-    <div class="opis">Description:
-      <!-- <textarea name="description" rows=4 cols=25><?php ///echo htmlentities($description);?></textarea> -->
-		<input type="text" id="description" name="description" value="<?php echo htmlentities($description); ?>"/>    
+    <div class="opis">Description:<br/>
+       <textarea id="description" name="description" rows=4 cols=25><?php echo htmlentities($description);?></textarea>
+       
+		
     </div>
     <div class="registrirajse">
          <input type="submit" id="button2" name="button2" value="Update">

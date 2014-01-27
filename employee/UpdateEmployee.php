@@ -81,7 +81,7 @@ $total_elmt = count ( $roll );
 <div class="lastname">Last name
 	<input type="text" id="surname" name="surname" value="<?php echo htmlentities($lastName); ?>"/><br />
 </div>
-<div class="email">E-mail
+        <div class="email">E-mail
 	<input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/><br />
 	
 </div>
@@ -187,7 +187,7 @@ $total_elmt = count ( $roll );
 	?>
 </div>
 <div class="button">
-	<input name="submit" type="submit" value="Update" /><br /> 
+	<input name="submit" type="submit" value="Update" />
 	<input name="reset" type="reset" value="Reset" />
 </div>
 

@@ -11,11 +11,11 @@ height:850px;
 width:280px;
 float:left;
 margin-top:60px;
-
 font-size:16px;
+
 }	
 #username{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
@@ -25,9 +25,13 @@ color:#999;
 height:30px;	
 margin-bottom:5px;
 padding:5px;
+}
+.user{
+    margin-bottom:20px;
+
 }
 #password{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
@@ -37,9 +41,12 @@ color:#999;
 height:30px;	
 margin-bottom:5px;
 padding:5px;
+}
+.pass{
+    margin-bottom:20px;
 }
 #name{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
@@ -49,9 +56,12 @@ color:#999;
 height:30px;	
 margin-bottom:5px;
 padding:5px;
+}
+.name{
+    margin-bottom:20px;
 }
 #surname{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
@@ -61,9 +71,12 @@ color:#999;
 height:30px;	
 margin-bottom:5px;
 padding:5px;
+}
+.lastname{
+    margin-bottom:20px;
 }
 #email{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
@@ -74,21 +87,28 @@ height:30px;
 margin-bottom:5px;
 padding:5px;
 }
+.email{
+    margin-bottom:20px;
+}
 #adress{
-height:35px;
+
 float:right;
 border:1px solid #bdc7d8;
 border-radius:5px;
 font-size:13px;
 background-color:#F0F4FD;
 color:#999;
-height:30px;	
+height:30px;
 margin-bottom:5px;
 padding:5px;
+}
+.address{
+    margin-bottom:20px;
+
 }
 #dan{
 		height:23px;
-	width:80px;
+	width:70px;
 	border:1px solid #bdc7d8;
 	border-radius:5px;
 	background-color:#F0F4FD;
@@ -97,7 +117,7 @@ padding:5px;
 }
 #mjesec{
 		height:23px;
-	width:80px;
+	width:70px;
 	border:1px solid #bdc7d8;
 	border-radius:5px;
 	background-color:#F0F4FD;
@@ -106,20 +126,28 @@ padding:5px;
 }
 #godina{
 		height:23px;
-	width:80px;
+	width:70px;
 	border:1px solid #bdc7d8;
 	border-radius:5px;
 	background-color:#F0F4FD;
 	color:#999;
 	}
+.dmg{
+    margin-top:5px;
+    margin-bottom:10px;
+}
 #radno_mjesto{
 	height:25px;
-	width:80px;
+     width:70px;
 	border:1px solid #bdc7d8;
 	border-radius:5px;
 	background-color:#F0F4FD;
 	color:#999;
 	margin-bottom:5px;
+}
+.regrm{
+
+    margin-bottom:10px;
 }
 #grad{
 	height:25px;
@@ -129,6 +157,12 @@ padding:5px;
 	background-color:#F0F4FD;
 	color:#999;
 	margin-bottom:5px;
+}
+.reggrad{
+    margin-bottom:10px;
+}
+.spol{
+    margin-bottom:15px;
 }
 .button input{
 	height:23px;

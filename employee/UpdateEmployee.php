@@ -2,8 +2,6 @@
 <head>
 <meta charset="utf-8">
 <title>Employee Monitor</title>
-
-
 <link type="text/css" href="../assets/css/UpdateEmployee.css" rel="stylesheet"/>
 <link type="text/css" href="../assets/css/administration.css" rel="stylesheet"/>
 </head>

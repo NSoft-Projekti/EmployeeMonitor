@@ -22,7 +22,6 @@
 		<div class="login">
 			<a href="navigacija.html"><input type="submit" name="submit" value="Log in"></a> 
 		</div>
-		
 	</form>
 	
 	</div>

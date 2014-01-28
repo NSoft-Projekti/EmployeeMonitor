@@ -17,14 +17,14 @@ body{
 }
 
 .registration{
-    background:url('naslovna.jpg');
+    background:url('../img/naslovna.jpg');
     width:800px;
     height:590px;
 
 }
 
 .img{
-    background:url('pozadina.jpg');
+    background:url('../img/pozadina.jpg');
     width:800px;
     height:590px;
 }

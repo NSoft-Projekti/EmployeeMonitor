@@ -66,15 +66,15 @@
     <div class="naslov">
         <h1>Update room</h1>
     </div>
-    <div class="naziv">Name:<br/>
+    <div class="naziv">Name</br>
         <input type="text" id="name" name="name" value="<?php echo htmlentities($name); ?>"/>
     </div>
     <div class="limit">
-        Limit:
+        Limit
     </div>
     <div class="vrijeme">
         <select name="limitation" id="limitation" style="width:70px;">
-            <option value="sat">Time:</option>      
+            <option value="sat">Time</option>
             <?php
 			for ($i=15; $i<=20; $i++) {
 			if($i==$limit){
@@ -87,11 +87,10 @@
 			?>     
         </select>
     </div>
-    <div class="opis">Description:<br/>
-       <textarea id="description" name="description" rows=4 cols=25><?php echo htmlentities($description);?></textarea>
+    <div class="opis">Description<br/></div>
+       <div><textarea id="description" name="description" rows=4 cols=25><?php echo htmlentities($description);?></textarea>
        
-		
-    </div>
+	</div>
     <div class="registrirajse">
          <input type="submit" id="button2" name="button2" value="Update">
     </div>

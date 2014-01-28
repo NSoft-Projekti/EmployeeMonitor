@@ -6,7 +6,7 @@ body{
     width:1024px;
     height:800px;
     margin:auto;
-    background:url('pozadina.jpg');
+    background:url('../img/pozadina.jpg');
     background-repeat:no-repeat;
 }
 .header{
@@ -25,7 +25,11 @@ body{
     margin-bottom:10px;
     background-color:#F0F4FD;
     padding-left:8px;
+    margin-top: 5px;
 }
+    .vrijeme{
+        margin-top: 5px;
+    }
 #limitation{
     width:200px;
     height:38px;
@@ -45,13 +49,16 @@ body{
     font-size:15px;
 }
 #description{
-    font-size:20px;
+    font-size:18px;
     font-family:calibri;
     border-radius:5px;
     border:1px solid #bdc7d8;
     background-color:#F0F4FD;
     padding-left:8px;
 
+}
+.opis{
+    margin-bottom: 5px;
 }
 .registrirajse input{
     margin-top:30px;

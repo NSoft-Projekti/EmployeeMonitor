@@ -85,7 +85,7 @@ $total_elmt = count ( $roll );
 	<div><input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/>
 	
 </div>
-<div class="address">Adress</div>
+<div class="address">Address</div>
 	<div><input type="text" id="adress" name="address" value="<?php echo htmlentities($address); ?>"/><br />
 </div>
 <div class="birth">Date of birth

@@ -38,7 +38,6 @@
 </style>
 </head>
 <body> 
-
 <div class="container" margin-top="30px;">
     <div class="header">
         <ul>
@@ -69,7 +68,7 @@
 <div class="regrm">
 <select name="room" class="textfields" id="room">
 
-<option id="0">Select room:</option>
+<option id="0">Select room</option>
  
 <?php 
         $getAllRooms = mysql_query("SELECT * FROM rooms;");
@@ -133,12 +132,12 @@ $query_room = $_POST['room'];
                                  
                                  
                 echo "<input type='hidden' name='r_id' value=".$results['RoomID'].">";
-                echo "<td> <input type='submit' value='Delete'/></td>"; 
+                echo "<td> <input type='submit' value='Delete' id='del'/></td>";
                  echo "</form>";
                  
                  echo "<form action='Update.php' method='GET'>"; 
                  echo "<input type='hidden' name='r_id' value=".$results['RoomID'].">";
-                 echo "<td> <input type='submit' value='Update'/></td>";
+                 echo "<td> <input type='submit' value='Update' id='upd'/></td>";
                  echo "</form>";
                                  
                                  echo "</tr>";

@@ -8,18 +8,22 @@
         {
             border:none;
             padding: 5px;
+            font-family:Calibri;
+            font-size:14px;
         }
 
         .Table th
         {
 
-            background-color:#F0F4FD;
+            background-color:#B2CAF4;
             padding: 8px 12px;
-            font-family:Arial;
-            font-size:11px;
+            font-size:14px;
+            border:none;
+
+
         }
 
-        .Table td
+        .Table td /*citava tablica*/
         {
 
             padding: 0 9px;
@@ -29,12 +33,9 @@
             border:none;
 
 
+
         }
-        .Table .input {
-            background:#FFFFFF;
-            width: 215px;
-            height: 20px;
-        }
+
 </style>
 </head>
 <body> 
@@ -111,11 +112,11 @@ $query_room = $_POST['room'];
         { 
                 $output="";
                 echo "<table class='Table' border='1px'>";
-                
+
                 echo "<tr bgcolor='#CAEDF7'>";
-                echo "<td>" . "Name" . "</td>";
-                echo "<td>" . "Limit" . "</td>";
-                echo "<td>" . "Description" . "</td>";
+                echo "<th>" . "Name" . "</th>";
+                echo "<th>" . "Limit" . "</th>";
+                echo "<th>" . "Description" . "</th>";
                 echo "</tr>";
                 
                 while($results = mysql_fetch_array($raw_results))
@@ -123,7 +124,7 @@ $query_room = $_POST['room'];
                 {
                 
                         {
-                                                  echo "<form action='functions/DeleteRoom.php' method ='GET'>";
+                                 echo "<form action='functions/DeleteRoom.php' method ='GET'>";
                                                   
                                  echo "<tr>";
                                  echo "<td>" .htmlspecialchars($results['Name'] ). "</td>";

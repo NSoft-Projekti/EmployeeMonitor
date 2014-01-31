@@ -13,7 +13,7 @@
     <ul>
 
         <li><a href="UpdateEmployee.php">Personal information</a></li>
-        <li><a href="#pregled_vremena">Working time review</a></li>
+        <li><a href="Time.php">Working time review</a></li>
         <li><a href="../includes/functions/logout.php">Log out</a></li>
 
     </ul>
@@ -68,25 +68,25 @@ $total_elmt = count ( $roll );
 	<h1>User information</h1>
 </div>
 
-<div class="user">Username</div>
-	<div><input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/>
+<div class="user">Username
+	<input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/><br />
 	
 </div>
-<div class="pass">Password</div>
-	<div><input type="text" id="password" name="password" value="<?php echo htmlentities($password); ?>"/>
+<div class="pass">Password
+	<input type="text" id="password" name="password" value="<?php echo htmlentities($password); ?>"/><br />
 </div>
-<div class="name">Name</div>
-	<div><input type="text" id="name" name="name" value="<?php echo htmlentities($firstName); ?>" />
+<div class="name">Name
+	<input type="text" id="name" name="name" value="<?php echo htmlentities($firstName); ?>" /><br />
 </div>
-<div class="lastname">Last name</div>
-	<div><input type="text" id="surname" name="surname" value="<?php echo htmlentities($lastName); ?>"/>
+<div class="lastname">Last name
+	<input type="text" id="surname" name="surname" value="<?php echo htmlentities($lastName); ?>"/><br />
 </div>
-        <div class="email">E-mail</div>
-	<div><input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/>
+        <div class="email">E-mail
+	<input type="email" id="email" name="email" value="<?php echo htmlentities($email); ?>"/><br />
 	
 </div>
-<div class="address">Address</div>
-	<div><input type="text" id="adress" name="address" value="<?php echo htmlentities($address); ?>"/><br />
+<div class="address">Adress
+	<input type="text" id="adress" name="address" value="<?php echo htmlentities($address); ?>"/><br />
 </div>
 <div class="birth">Date of birth
 </div>
@@ -132,8 +132,8 @@ $total_elmt = count ( $roll );
 	?>
 </select>
 </div>
-<div class="regrm">Radno mjesto </div>
-	<div><select name="radno_mjesto" class="textfields" id="radno_mjesto">
+<div class="regrm">
+	Radno mjesto <select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
 	<?php
         $getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
@@ -149,8 +149,8 @@ $total_elmt = count ( $roll );
 	?> 
 </select>
 </div>
-<div class="reggrad">Grad</div>
- <div><select name="grad" class="textfields" id="grad">
+<div class="reggrad">Grad
+ <select name="grad" class="textfields" id="grad">
 	<?php
         $getAllCities = mysql_query("SELECT * FROM cities;");
         while($viewAllCities=mysql_fetch_array($getAllCities)){
@@ -187,8 +187,8 @@ $total_elmt = count ( $roll );
 	?>
 </div>
 <div class="button">
-<input name="submit" type="submit" value="Update" />
-<input name="reset" type="reset" value="Reset" />
+	<input name="submit" type="submit" value="Update" />
+	<input name="reset" type="reset" value="Reset" />
 </div>
 
 	

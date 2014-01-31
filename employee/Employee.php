@@ -15,14 +15,23 @@ include '../includes/indeks.php';
 
 </style>
 </head>
-<body onload="bla()">
+<?php 
+if(empty($_POST['room']))
+{
+	echo '<body onload="bla()">';	
+}
+else 
+	echo'<body>';
+
+?>
+
 <div class="container">
 	<div class="header">
 		
 <ul>
 
 <li><a href="UpdateEmployee.php">Personal information</a></li>
-<li><a href="#pregled_vremena">Working time review</a></li>
+<li><a href="Time.php">Working time review</a></li>
 <li><a href="../includes/functions/logout.php">Log out</a></li>
 
 </ul>
@@ -30,44 +39,54 @@ include '../includes/indeks.php';
 	</div>
 	<div class="registracija">
 	</div>
+		<?php 
+		session_start();
+		//$_SESSION['currRoom'] = $_POST['room'];
+		if(!empty($_POST['room']))
+		{
+			
+    		$currentRoom = $_POST['room'];
+    		
+    		$currTime = date("Y-m-d H:i:s");
+    		session_start();
+    		$_SESSION['room'] = $currentRoom;
+    		$currUsername =  $_SESSION['Username'];
+	    	$query = "SELECT * FROM employees WHERE Username = '$currUsername'";
+	    	$result = mysql_query($query) or die (mysql_error());
+	    	$row = mysql_fetch_array ( $result );
+	    	$currEmpId=$row['EmployeeID'];
+	    	$raw_results = mysql_query("INSERT INTO `employeemonitor`.`employeerooms` (`LogTime`, `LoggedIn`, `EmployeeID`, `RoomID`) 
+	    			VALUES('$currTime', '1', '$currEmpId', '$currentRoom')") or die (mysql_error());
+			die();
+		}
+		
+    ?>
+ 
+	<div id="rooms" class="rooms">
+    		<h1>Please, choose room!</h1>
 
-
-<div id="rooms" class="rooms">
-    <h1>Please, choose room!</h1>
-
-    <form action="Employee.php" method="post">
-        <div class="regrm">
+    			<form action="Employee.php" method="POST">
+        			<div class="regrm">
 
             Select room:  <select name="room" class="textfields" id="room">
                 <option id="0">--Select--</option>
 
-                <?php
+                <?php 
                 $getAllRooms = mysql_query("SELECT * FROM rooms;");
                 while($viewAllRooms=mysql_fetch_array($getAllRooms)){
                     echo "<option value=".$viewAllRooms['RoomID'].">".$viewAllRooms['Name']."</option>";
-                }
-                ?>
+                }?>
+                
             </select>
-            <input type="submit" name="Search_rm" />
-        </div>
-    </form>
+            <input type="submit" name="Enter_rm" value="Enter" />
+        			</div>
+    			</form>
+			</div>
+		
 
-    <?php
-    include_once ('../includes/indeks.php');
-
-    $query_room = $_POST['room'];
-
-
-    $query_room = htmlspecialchars($query_room);
-    $query_room = mysql_real_escape_string($query_room);
-
-    $raw_results = mysql_query("SELECT * FROM rooms WHERE RoomID = '$query_room' ") or die(mysql_error());
-
-    ?>
-</div>
-<script>
-    function bla(){$('#rooms').bPopup();}
-</script>
- </div>
+		<script>
+    		function bla(){$("#rooms").bPopup();}
+		</script>
+ 	</div>
 </body>
 </html>

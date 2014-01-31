@@ -1,43 +1,6 @@
 
 <style>
 
-    .Table
-    {
-        /*border: 1px solid #BBBBBB;*/
-        border:none;
-        /*border-collapse: collapse;*/
-        padding: 5px;
-
-    }
-
-    .Table th
-    {
-
-        background-color:red;
-        padding: 8px 12px;
-        font-family:Arial;
-        font-size:11px;
-        margin-top:20px;
-    }
-
-    .Table td
-    {
-
-        padding: 0 5px;
-        /*border-right: 1px solid #BBBBBB;*/
-        height: 30px;
-
-    }
-    .Table .input {
-        /*border: 1px solid #BBBBBB;*/
-        background:blue;
-        width: 215px;
-        height: 20px;
-    }
-
-
-
-
 </style>
 
 <?php require_once '../includes/indeks.php'; ?>
@@ -79,9 +42,9 @@
  		<form action="../employee/Search.php" method="post">
 
 			<div class="regrm">
-			Position:  <select name="position" class="textfields" id="radno_mjesto">
+			<select name="position" class="textfields" id="radno_mjesto">
 
-			<option id="0" value=0>--Select--</option>
+			<option id="0" value=0>Position</option>
 			<?php 
 				$getAllRadnaMjesta = mysql_query("SELECT * FROM positions;");
 				while($viewAllRadnaMjesta=mysql_fetch_array($getAllRadnaMjesta)){
@@ -91,9 +54,9 @@
 			</select>
 			</div>
 			<input type="text" name="name" placeholder="Username" id="user"/>
-			<input type="submit" name="Search" />
+			<input type="submit" name="Search" value="Send" id="send1"/>
 		</form> 
-	</div>
+
 
 <?php
 
@@ -128,18 +91,18 @@ $raw_results = mysql_query($query);
 	if(mysql_num_rows($raw_results) > 0)
 	{ 
 		$output="";
-		echo "<table class='Table' border='1px'>";
-		
-		echo "<tr bgcolor='6699CC'>";
-		echo "<td>" . "Username" . "</td>";
-		echo "<td>" . "First name" . "</td>";
-		echo "<td>" . "Last name" . "</td>";
-		echo "<td>" . "Address" . "</td>";
-		echo "<td>" . "Gender" . "</td>";
-		echo "<td>" . "E-mail" . "</td>";
-		echo "<td>" . "Birthday" . "</td>";
+		echo "<table class='Table'>";
+
+		echo "<tr bgcolor='#B2CAF6'>";
+		echo "<th>" . "Username" . "</th>";
+		echo "<th>" . "First name" . "</th>";
+		echo "<th>" . "Last name" . "</th>";
+		echo "<th>" . "Address" . "</th>";
+		echo "<th>" . "Gender" . "</th>";
+		echo "<th>" . "E-mail" . "</th>";
+		echo "<th>" . "Birthday" . "</th>";
 		echo "</tr>";
-		
+
 		while($results = mysql_fetch_array($raw_results))
 			
 		{
@@ -157,7 +120,7 @@ $raw_results = mysql_query($query);
 		 		echo "<td>" .htmlspecialchars($results['Birthday']) . "</td>";
 		 		
 		echo "<input type='hidden' name='z_id' value=".$results['EmployeeID'].">";
-		 		echo "<td><input type='submit' name='submit' value='Delete'></td>"; 
+		 		echo "<td><input type='submit' name='submit' value='Delete' id='del1'></td>";
 		 		echo "</form>";
 		 		
 		 		echo "</tr>";
@@ -170,7 +133,7 @@ $raw_results = mysql_query($query);
 		
  }
 ?>		
-    
-
+</div>
+</div>
 </body>
 </html>

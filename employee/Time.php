@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Employee Monitor</title>
-<link type="text/css" href="../assets/css/UpdateEmployee.css" rel="stylesheet"/>
+
 <link type="text/css" href="../assets/css/administration.css" rel="stylesheet"/>
+<link type="text/css" href="../assets/css/time.css" rel="stylesheet"/>
 </head>
 <body>
 
-
+<div class="container">
 <div class="header">
     <ul>
 
@@ -19,35 +20,35 @@
     </ul>
 </div>
 
+<div class="time">
+    <?php
 
-<?php 
+    session_start();
+    $curUsername = $_SESSION['Username'];
+    $query = "SELECT * FROM employees WHERE Username = '$curUsername'";
+    $result = mysql_query($query) or die (mysql_error());
+    $row = mysql_fetch_array ( $result );
+    $currEmpId=$row['EmployeeID'];
+    $query=("SELECT * FROM employeerooms WHERE EmployeeID = '$currEmpId'");
 
-session_start();
-$curUsername = $_SESSION['Username'];
-$query = "SELECT * FROM employees WHERE Username = '$curUsername'";
-$result = mysql_query($query) or die (mysql_error());
-$row = mysql_fetch_array ( $result );
-$currEmpId=$row['EmployeeID'];
-$query=("SELECT * FROM employeerooms WHERE EmployeeID = '$currEmpId'");
+    $raw_results = mysql_query($query);
 
-$raw_results = mysql_query($query);
-
-if(mysql_num_rows($raw_results) > 0)
-{
+    if(mysql_num_rows($raw_results) > 0)
+    {
 	$output="";
-	echo "<table class='Table' border='1px'>";
+	echo "<table class='Table' >";
 
-	echo "<tr bgcolor='#CAEDF7'>";
-	echo "<td>" . "Time" . "</td>";
-	echo "<td>" . "Status" . "</td>";
-	echo "<td>" . "Room" . "</td>";
+	echo "<tr>";
+	echo "<th >" . "Time" . "</th>";
+	echo "<th>" . "Status" . "</th>";
+	echo "<th>" . "Room" . "</th>";
 	echo "</tr>";
 
 	while($results = mysql_fetch_array($raw_results))
 
 	{
 		{
-			echo "<tr>";
+			echo "<tr >";
 			echo "<td>" .htmlspecialchars($results['LogTime'] ). "</td>";
 			echo "<td>" .htmlspecialchars($results['LoggedIn'] ). "</td>";
 			echo "<td>" .htmlspecialchars($results['RoomID'] ). "</td>";
@@ -55,11 +56,13 @@ if(mysql_num_rows($raw_results) > 0)
 		}
 	}
 	echo "</table> ";
-}
+    }
 
 
 
-?>
+    ?>
+</div>
+</div>
 
 
 </body>

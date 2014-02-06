@@ -12,13 +12,30 @@
 
     <div class="container">
         <div class="header">
-            <ul>
 
-                <li><a href="UpdateEmployee.php">Personal information</a></li>
-                <li><a href="Time.php">Working time review</a></li>
-                <li><a href="../includes/functions/logout.php">Log out</a></li>
+                <ul>
+                    <li><a href="#">Employees</a>
+                        <ul>
+                            <li><a href="../employee/Registration.php">Register employee</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="../employee/Search.php">Search employees</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="../admin/Tracking.php">Tracking employees</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Rooms</a>
+                        <ul>
+                            <li><a href="../room/Add.php">Add new room</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="../room/Search.php">Room list</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../includes/functions/logout.php">Log out</a></li>
+                </ul>
 
-            </ul>
         </div>
 <div class="tracking">
 <?php
@@ -34,7 +51,7 @@ while ($row=mysql_fetch_array($result))
 	echo "<table class='Table'>";
 	
 	echo "<tr bgcolor='#CAEDF7'>";
-	echo "<td>" .htmlspecialchars($row['Name'] )."</td>";
+	echo "<th>" .htmlspecialchars($row['Name'] )."</th>";
 	
 	
 	$r_query="SELECT * FROM (select * from employeemonitor.employeerooms where RoomID=".$row['RoomID']." and LoggedIn='1' order by LogTime desc ) as emprooms_tmp	group by EmployeeID order by LogTime desc";

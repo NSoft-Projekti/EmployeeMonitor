@@ -97,7 +97,11 @@ if(response == 1){
 						</ul>
 						<ul>
 							<li><a href="Search.php">Search employees</a></li>
-						</ul></li>
+						</ul>
+                        <ul>
+                            <li><a href="../admin/Tracking.php">Tracking employees</a></li>
+                        </ul>
+                    </li>
 					<li><a href="#">Rooms</a>
 						<ul>
 							<li><a href="../room/Add.php">Add new room</a></li>

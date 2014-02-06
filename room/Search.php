@@ -39,7 +39,7 @@
 </style>
 </head>
 <body> 
-<div class="container" margin-top="30px;">
+<div class="container" >
     <div class="header">
         <ul>
 
@@ -50,6 +50,9 @@
                         </ul>
                         <ul>
                             <li><a href="../employee/Search.php">Search employees</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="Tracking.php">Tracking employees</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Rooms</a>

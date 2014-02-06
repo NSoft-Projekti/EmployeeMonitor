@@ -10,6 +10,7 @@
     <title>Employee Monitor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link type="text/css" href="../assets/css/administration.css" rel="stylesheet"/>
+    <link type="text/css" href="../assets/css/time.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -24,6 +25,9 @@
                 </ul>
                 <ul>
                     <li><a href="Search.php">Search employees</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../admin/Tracking.php">Tracking employees</a></li>
                 </ul>
             </li>
             <li><a href="#">Rooms</a>

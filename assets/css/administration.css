@@ -8,7 +8,6 @@ body{
     height:800px;
     margin:auto;
 
-
 }
 .header{
     width:1024px;
@@ -24,11 +23,9 @@ body{
 }
 
 .img{
-    background:url('../img/pozadina.jpg');
-    background-repeat:no-repeat;
     width:950px;
     height:590px;
-    margin-top:70px;
+    margin-top:90px;
 }
 #radno_mjesto{
     width:150px;
@@ -76,7 +73,6 @@ body{
 
 }
 
-
 .submit input {
     width:150px;
     height:30px;
@@ -88,7 +84,6 @@ body{
     padding:8px;
     margin-top:70px;
     margin-bottom:10px;
-
 
 }
 .send input{
@@ -166,7 +161,6 @@ ul li {
 
 .Table th
 {
-
     background-color:#B2CAF4;
     padding: 8px 12px;
     font-size:14px;
@@ -182,8 +176,5 @@ ul li {
     width:100px;
     background-color:#F0F4FD;
     border:none;
-
-
-
 }
 

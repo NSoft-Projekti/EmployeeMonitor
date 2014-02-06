@@ -6,6 +6,8 @@ body{
     width:1024px;
     height:800px;
     margin:auto;
+    background:url('../img/pozadina.jpg');
+    background-repeat:no-repeat;
 }
 .header{
     width:1024px;
@@ -13,7 +15,7 @@ body{
     background:#B2CAF4;
 }
 .time{
-    background:url('../img/pozadina.jpg');
+
     width:800px;
     height:590px;
     margin-top:70px;
@@ -43,8 +45,7 @@ body{
 }
 .tracking
 {
-   background:url('../img/pozadina.jpg');
-    width:800px;
+width:800px;
     height:590px;
     margin-top:90px;
 }

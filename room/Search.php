@@ -52,7 +52,7 @@
                             <li><a href="../employee/Search.php">Search employees</a></li>
                         </ul>
                         <ul>
-                            <li><a href="Tracking.php">Tracking employees</a></li>
+                            <li><a href="../admin/Tracking.php">Tracking employees</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Rooms</a>

@@ -29,7 +29,9 @@
         $result = mysql_query($query) or die (mysql_error());
         $row = mysql_fetch_array ( $result );
         $currEmpId=$row['EmployeeID'];
-        $query=("SELECT * FROM employeerooms WHERE EmployeeID = '$currEmpId'");
+        $query=("SELECT * FROM employeerooms er, rooms r
+        		WHERE er.RoomID=r.RoomID
+        		AND EmployeeID = '$currEmpId'");
 
         $raw_results = mysql_query($query);
 
@@ -51,7 +53,7 @@
                     echo "<tr >";
                     echo "<td>" .htmlspecialchars($results['LogTime'] ). "</td>";
                     echo "<td>" .htmlspecialchars($results['LoggedIn'] ). "</td>";
-                    echo "<td>" .htmlspecialchars($results['RoomID'] ). "</td>";
+                    echo "<td>" .htmlspecialchars($results['Name'] ). "</td>";
                     echo "</tr>";
                 }
             }

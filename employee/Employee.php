@@ -47,7 +47,7 @@ else
 			
     		$currentRoom = $_POST['room'];
     		
-    		$currTime = date("Y-m-d H:i:s");
+    		$currTime = date("Y-m-d H:i:s.u");
     		session_start();
     		$_SESSION['room'] = $currentRoom;
     		$currUsername =  $_SESSION['Username'];
@@ -55,9 +55,25 @@ else
 	    	$result = mysql_query($query) or die (mysql_error());
 	    	$row = mysql_fetch_array ( $result );
 	    	$currEmpId=$row['EmployeeID'];
+	    	$isLoggedOutQuerry = "SELECT * FROM employeemonitor.employeerooms where EmployeeID='$currEmpId' ORDER BY LogTime DESC LIMIT 1";
+	    	$raw_isLoggedOut = mysql_query($isLoggedOutQuerry);
+	    	$isLoggedOut = mysql_fetch_array($raw_isLoggedOut);
+	    	
+	    	if($isLoggedOut['LoggedIn']==1)
+	    	{
+	    		$currRoom = $isLoggedOut['RoomID'];
+	    		$raw_results = mysql_query("INSERT INTO `employeemonitor`.`employeerooms` (`LogTime`, `LoggedIn`, `EmployeeID`, `RoomID`)
+					VALUES('$currTime', '0', '$currEmpId', '$currRoom')") or die (mysql_error());
+				
+				$raw_results = mysql_query("INSERT INTO `employeemonitor`.`employeerooms` (`LogTime`, `LoggedIn`, `EmployeeID`, `RoomID`)
+					VALUES('$currTime', '1', '$currEmpId', '$currentRoom')") or die (mysql_error());
+	    	}
+	    	else
+	    	{
 	    	$raw_results = mysql_query("INSERT INTO `employeemonitor`.`employeerooms` (`LogTime`, `LoggedIn`, `EmployeeID`, `RoomID`) 
 	    			VALUES('$currTime', '1', '$currEmpId', '$currentRoom')") or die (mysql_error());
-			die();
+	    	}
+		die();
 		}
 		
     ?>

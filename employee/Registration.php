@@ -88,8 +88,11 @@ if(response == 1){
 <body>
 <form onSubmit="return validate()" action="functions/register.php" method="POST">
 <div class="container">
-<img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right" >
-			<div class="header">
+
+    
+
+
+		<div class="header">
 				<ul>
 					<li><a href="#">Employees</a>
 						<ul>
@@ -112,6 +115,11 @@ if(response == 1){
 					<li><a href="../includes/functions/logout.php">Log out</a></li>
 				</ul>
 			</div>
+				
+			<img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">';
+			<input type="file" name="profile">
+			
+   
 <div class="registration">
 <div class="headline">
 <h1>User registration</h1>

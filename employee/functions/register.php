@@ -9,7 +9,7 @@ if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['pass
     $surname = $_POST['surname'];
     $emailaddress = $_POST['email'];
     $address = $_POST['address'];
-    
+
     $s_year = $_POST['godina'];
     $s_month = $_POST['mjesec'];
     $s_day = $_POST['dan'];
@@ -22,6 +22,22 @@ if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['pass
     $rmjesto = $_POST['radno_mjesto'];
     $datumreg = date("Y/m/d");
     
+    //$allowed = array('jpg', 'jpeg', 'gif', 'png');
+
+    $file_name = $_FILES['profile']['name'];
+    $file_extn = strtolower(end(explode('.', $name)));
+    $file_temp = $_FILES['profile']['tmp_name'];
+    $hashed_name = substr(md5(time()),0,10).'.'.$file_extn;
+    $file_path = '../../assets/img/profile/'.$hashed_name;
+    move_uploaded_file($file_temp, $file_path);
+    
+    /*if(in_array($extn, $allowed) === true){
+    	change_profile_image( $file_temp, $file_extn);
+    } else{
+    	echo 'Incorrect file type.';
+    }*/
+ 
+    
     $checkusername = mysql_query("SELECT * FROM employees WHERE Username  = '".$username."'");
     
     if(mysql_num_rows($checkusername) == 1)
@@ -33,7 +49,7 @@ if((!empty($_POST['username']) and !empty($_POST['password'])) and ($_POST['pass
 
      {
             $registerquery = mysql_query("INSERT INTO `employees` (`Username`, `Password`, `FirstName`, `LastName`, `Address`, `Birthday`, `Gender`, `Email`, `RegistrationDate`, `Administrator`, `CityID`, `PositionID`, `Image`)  
-            VALUES('$username', '$password',  '$name', '$surname', '$address', '$datumrodjenja', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto', 'null' )") or die(mysql_mysql_error());
+            VALUES('$username', '$password',  '$name', '$surname', '$address', '$datumrodjenja', '$spol', '$emailaddress',  '$datumreg', '0' , '$grad' , '$rmjesto', '$hashed_name' )") or die(mysql_mysql_error());
             
         
         if($registerquery)

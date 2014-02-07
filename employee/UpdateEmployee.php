@@ -8,12 +8,12 @@
 <body>
 
 <div class="container">
-    <img src="http://placehold.it/200x200" style="padding-right:40px; padding-top:60px;" align="right">
+	
     <div class="header">
         <ul>
 
             <li><a href="UpdateEmployee.php">Personal information</a></li>
-            <li><a href="#pregled_vremena">Working time review</a></li>
+            <li><a href="Time.php">Working time review</a></li>
             <li><a href="../includes/functions/logout.php">Log out</a></li>
 
         </ul>
@@ -47,7 +47,7 @@
     }
 
 
-
+	$image = $row['Image'];
     $cityId = $row ['CityID'];
     $positionId = $row['PositionID'];
     $gender = $row['Gender'];
@@ -59,7 +59,7 @@
     }
     $total_elmt = count ( $roll );
     ?>
-    <form method="get" action="">
+    <form method="POST" action="" enctype="multipart/form-data">
 
         <div class="update">
 
@@ -67,7 +67,10 @@
             <div class="headline">
                 <h1>User information</h1>
             </div>
-
+			<div class="profile" align="right" style="padding-right:40px; padding-top:60px;" >
+    	 		<img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200"  > 
+				<input type="file" name="profile">
+    		</div>
             <div class="user">Username</div>
             <div><input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/>
 
@@ -198,23 +201,39 @@
 
 <?php
 
-if (isset ( $_GET ['submit'] )) {
+if (isset ( $_POST ['submit'] )) {
 
-    $_SESSION ['Username']= $_GET ['username'];
-    $korisnicko_ime = $_GET ['username'];
-    $lozinka = $_GET ['password'];
-    $ime = $_GET ['name'];
-    $prezime = $_GET ['surname'];
-    $email = $_GET ['email'];
-    $adresa = $_GET ['address'];
-    $radno_mjesto=$_GET ['radno_mjesto'];
-    $spol=$_GET['sex'];
-    $grad=$_GET['grad'];
+    $_SESSION ['Username']= $_POST ['username'];
+    $korisnicko_ime = $_POST ['username'];
+    $lozinka = $_POST ['password'];
+    $ime = $_POST ['name'];
+    $prezime = $_POST ['surname'];
+    $email = $_POST ['email'];
+    $adresa = $_POST ['address'];
+    $radno_mjesto=$_POST ['radno_mjesto'];
+    $spol=$_POST['sex'];
+    $grad=$_POST['grad'];
 
-    $s_year = $_GET['godina'];
-    $s_month = $_GET['mjesec'];
-    $s_day = $_GET['dan'];
-
+    $s_year = $_POST['godina'];
+    $s_month = $_POST['mjesec'];
+    $s_day = $_POST['dan'];
+    
+    $file_name = $_FILES['profile']['name'];
+ 	if(empty($file_name)===false)
+ 	{
+    $file_extn = strtolower(end(explode('.', $name)));
+ 
+    $file_temp = $_FILES['profile']['tmp_name'];
+ 
+    $hashed_name = substr(md5(time()),0,10).'.'.$file_extn;
+ 
+    $file_path = '../assets/img/profile/'.$hashed_name;
+    move_uploaded_file($file_temp, $file_path);
+ 	}
+ 	else 
+ 	{
+ 		$hashed_name=$image;
+ 	}
     $datumrodjenja = "$s_year-$s_month-$s_day";
 
 
@@ -222,7 +241,7 @@ if (isset ( $_GET ['submit'] )) {
 
     $query2 = "UPDATE employees SET Username='$korisnicko_ime', Password='$lozinka' ,
 	FirstName='$ime', LastName='$prezime', Email='$email', Address='$adresa', PositionID='$radno_mjesto',
-	Gender='$spol', CityID='$grad', Birthday='$datumrodjenja'
+	Gender='$spol', CityID='$grad', Birthday='$datumrodjenja', Image='$hashed_name'
 	WHERE  EmployeeID='$id' ";
 
     $result2 = mysql_query ( $query2 ) or die ( "Query Failed : " . mysql_error () );

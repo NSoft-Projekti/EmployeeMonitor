@@ -1,7 +1,8 @@
 <?php
 error_reporting(E_WARNING);
 
-$mysql_host = "10.0.0.250";
+$mysql_host = "212.39.106.114:13306";
+//$mysql_host = "10.0.0.250";
 $mysql_database = "employeemonitor";
 $mysql_user = "root";
 $mysql_password = "mojapraksa";

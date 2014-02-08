@@ -54,43 +54,31 @@ while ($row=mysql_fetch_array($result))
 	echo "<th>" .htmlspecialchars($row['Name'] )."</th>";
 	
 	
-	$r_query="SELECT * FROM (select * from employeemonitor.employeerooms where RoomID=".$row['RoomID']." and LoggedIn='1' order by LogTime desc ) as emprooms_tmp	group by EmployeeID order by LogTime desc";
+	$r_query="SELECT * FROM (select * from employeemonitor.employeerooms order by LogTime desc ) as emprooms_tmp	group by EmployeeID order by LogTime desc";
 	$raw_results = mysql_query($r_query);
-	while($res = mysql_fetch_array($raw_results))
-	{
-		//if($row['RoomID']==$res['RoomID'])
-		//{
-		$empName = mysql_query("SELECT Username FROM employees WHERE EmployeeID = ".$res['EmployeeID']."");
-		$resEmpName = mysql_fetch_array($empName);
-			echo "<tr>";
-			echo "<td>" .htmlspecialchars($resEmpName['Username']). "</td>";
-			echo "<td>" .htmlspecialchars($res['LogTime'] ). "</td>";
-			//echo "<td>" .htmlspecialchars($res['LoggedIn'] ). "</td>";
-			echo "</tr>";
-		//}
-	}
+
+		while($res = mysql_fetch_array($raw_results))
+		{
+			if($row['RoomID']==$res['RoomID'])
+			{
+				if($res['LoggedIn']==1)
+				{
+					$empName = mysql_query("SELECT Username FROM employees WHERE EmployeeID = ".$res['EmployeeID']."");
+					$resEmpName = mysql_fetch_array($empName);
+					echo "<tr>";
+					echo "<td>" .htmlspecialchars($resEmpName['Username']). "</td>";
+					echo "<td>" .htmlspecialchars($res['LogTime'] ). "</td>";
+					//echo "<td>" .htmlspecialchars($res['LoggedIn'] ). "</td>";
+					echo "</tr>";
+				}
+			}
+		}	
+	
 	echo "</tr>";
 	
 	echo "</table> ";
 	
-$to = 'hary.bb@gmail.com';
-$subject = 'test email';
-$body = 'body email';
-
-$headers = 'From: nekog <someone@tim9.com>';
-
-/*mail('hary.bb@gmail.com', 'Mercury test mail', 'If you can read this, everything was fine!');
-
-if(mail('hary.bb@gmail.com', 'Mercury test mail', 'If you can read this, everything was fine!')mail($to,$subject,$body,$headers)){
-	echo 'poslan mail';
-}else{
-	echo 'greska :/';
-
-}*/
 }
-// $row = mysql_fetch_array ( $result );
-// $currEmpId=$row['EmployeeID'];
-// $query=("SELECT * FROM employeerooms WHERE EmployeeID = '$currEmpId'");
 
 ?>
 

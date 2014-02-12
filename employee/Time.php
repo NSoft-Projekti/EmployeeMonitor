@@ -13,7 +13,7 @@
         <ul class="sos">
 
             <li class="sos"><a class="sos" href="UpdateEmployee.php">Personal information</a></li>
-            <li class="sos"> <a class="sos" href="newfile.php">Working time review</a></li>
+            <li class="sos"> <a class="sos" href="Time.php">Working time review</a></li>
             <li class="sos"> <a class="sos" href="../includes/functions/logout.php">Log out</a></li>
 
         </ul>

@@ -61,20 +61,20 @@ div.pagination {
 div.pagination a {
 	padding: 2px 5px 2px 5px;
 	margin: 2px;
-	border: 1px solid #AAAADD;
+    border:1px solid #B2CAF4;
 	text-decoration: none; /* no underline */
-	color: #000099;
+	color: #000000;
 }
 div.pagination a:hover, div.pagination a:active
     {
-	border: 1px solid #000099;
+	border: 1px solid #74A0EF;
     color: #000;
     }
 div.pagination span.current
     {
 	padding: 2px 5px 2px 5px;
 	margin: 2px;
-    border:1px solid #bdc7d8;
+    border:1px solid #74A0EF;
 	font-weight: bold;
 	background-color: #B2CAF4;
 	color: #FFF;
@@ -83,8 +83,8 @@ div.pagination span.disabled
     {
 		padding: 2px 5px 2px 5px;
 		margin: 2px;
-		border: 1px solid #EEE;
-	    color: #DDD;
+		border: 1px solid #B2CAF4;
+	    color: #74A0EF;
 	}
 ul
     {

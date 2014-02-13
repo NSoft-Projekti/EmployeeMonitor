@@ -63,7 +63,6 @@
             <input type="submit" id="button2" name="button2" value="Add">
         </div>
     </div>
-</form>
-
+    </form>
 </body>
 </html>

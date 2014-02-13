@@ -5,8 +5,9 @@ font-family:calibri;
 .container{
 background:url(../img/naslovna.jpg);
 width:1024px;
-height:600px;
+height:800px;
 margin:auto;
+ background-repeat: no-repeat;
 }
 .form{
 width:260px;

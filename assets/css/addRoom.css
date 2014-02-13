@@ -2,7 +2,7 @@
 body{
     font-family:calibri;
 }
-.container{
+.wrapper{
     width:1024px;
     height:800px;
     margin:auto;

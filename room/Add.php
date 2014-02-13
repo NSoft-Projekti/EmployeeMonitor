@@ -9,7 +9,7 @@
 </head>
 <body>
 <form action="functions/AddRoom.php" method="POST">
-    <div class="container">
+    <div class="wrapper">
 
         <div class="header">
             <ul>

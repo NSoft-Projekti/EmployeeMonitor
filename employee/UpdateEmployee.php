@@ -8,6 +8,10 @@
 <body>
 
 <div class="container">
+    <div class="profile"   >
+        <img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200"  >
+        <input type="file" name="profile" style="margin-top: 10px">
+    </div>
 	
     <div class="header">
         <ul>
@@ -67,10 +71,7 @@
             <div class="headline">
                 <h1>User information</h1>
             </div>
-			<div class="profile" align="right" style="padding-right:40px; padding-top:60px;" >
-    	 		<img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200"  > 
-				<input type="file" name="profile">
-    		</div>
+
             <div class="user">Username</div>
             <div><input type="text" id="username" name="username"  value="<?php echo htmlentities($userName); ?>"/>
 
@@ -135,7 +136,7 @@
                     ?>
                 </select>
             </div>
-            <div class="regrm">Radno mjesto </div>
+            <div class="regrm">Working place </div>
             <div><select name="radno_mjesto" class="textfields" id="radno_mjesto">
 
                     <?php
@@ -152,7 +153,7 @@
                     ?>
                 </select>
             </div>
-            <div class="reggrad">Grad</div>
+            <div class="reggrad">Town</div>
             <div><select name="grad" class="textfields" id="grad">
                     <?php
                     $getAllCities = mysql_query("SELECT * FROM cities;");

@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="profile"   >
-        <img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200"  >
+        <img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200" >
         <input type="file" name="profile" style="margin-top: 10px">
     </div>
 	

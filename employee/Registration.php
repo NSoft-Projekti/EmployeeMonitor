@@ -89,7 +89,7 @@ if(response == 1){
 <form onSubmit="return validate()" action="functions/register.php" method="POST">
 <div class="container">
    <div class="placehold" >
-       <img src="http://placehold.it/200x200" >
+       <img src="http://placehold.it/200x200">
        <input type="file" name="profile" style="margin-top: 10px">
    </div>
     

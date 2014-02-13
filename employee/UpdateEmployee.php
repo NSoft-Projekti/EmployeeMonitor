@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<div class="container">
+<div class="wrapper">
     <div class="profile"   >
         <img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200" >
-        <input type="file" name="profile" style="margin-top: 10px">
+        <input type="file" name="profile" >
     </div>
 	
     <div class="header">

@@ -9,6 +9,7 @@
 <body>
 
 <div class="wrapper">
+
     <div class="profile"   >
         <img src="<?php echo '../assets/img/profile/'.$image; ?>" height="200" weight="200" >
         <input type="file" name="profile" >
